@@ -1,0 +1,5 @@
+---
+sh: yarn eslint --fix src/config/db/migrate/<%= ts %>_<%= name || 'migration' %>.js
+spinner: running eslint
+sh_ignore_exit: true
+---

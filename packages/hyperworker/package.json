@@ -1,0 +1,37 @@
+{
+  "name": "@hyperstackjs/hyperworker",
+  "version": "1.0.28",
+  "description": "",
+  "author": "Dotan Nahum <dotan@rng0.io>",
+  "license": "MIT",
+  "keywords": [],
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build:dev": "tsup-node src/* --watch --dts",
+    "build:core": "pnpm build",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && tsup-node src/* --dts",
+    "test": "jest --runInBand",
+    "test:ci:core": "pnpm test",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "bullmq": "^1.85.3",
+    "debug": "^4.3.4",
+    "ejs": "^3.1.8",
+    "email-templates": "^9.0.0",
+    "glob": "^8.0.3",
+    "ioredis": "^5.0.6",
+    "ioredis-mock": "^8.2.2",
+    "lodash": "^4.17.21",
+    "nodemailer": "^6.7.5",
+    "nodemailer-stub": "^1.2.2",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@hyperstackjs/typings": "1.0.28"
+  }
+}

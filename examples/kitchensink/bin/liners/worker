@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+require('ts-node/register')
+require('tsconfig-paths/register')
+
+const path = require('path')
+const { useWorkers } = require('hyperstack')
+
+useWorkers(
+  {
+    root: path.join(__dirname, '../../src'),
+  },
+  ({ context }) => {
+    const store = context.store()
+    const logger = store.logger
+    const bg = store.workers?.background
+    if (bg === 'inprocess') {
+      logger.warn(
+        'you are running workers inprocess (workers.inprocess=true), worker runner does not make sense.'
+      )
+    }
+  }
+)

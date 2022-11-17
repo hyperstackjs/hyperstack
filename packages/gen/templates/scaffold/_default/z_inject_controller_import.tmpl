@@ -1,0 +1,8 @@
+---
+to: src/app/controllers/index.ts
+inject: true
+prepend: true
+skip_if: "{<%= Names %>Controller } from"
+eof_last: false
+---
+import { <%= Names %>Controller } from './<%= names %>'

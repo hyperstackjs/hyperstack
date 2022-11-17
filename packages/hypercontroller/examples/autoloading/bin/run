@@ -1,0 +1,15 @@
+#!/usr/bin/env node -r esbuild-register
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const {
+  createServer,
+  printRoutes,
+  load,
+  listen,
+} = require('@hyperstackjs/hypercontroller')
+
+const app = createServer({
+  controllers: load('src/controllers/*.ts'),
+})
+printRoutes(app)
+listen(app)

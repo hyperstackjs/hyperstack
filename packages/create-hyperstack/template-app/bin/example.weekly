@@ -1,0 +1,24 @@
+#!/usr/bin/env -S node
+/* eslint-disable @typescript-eslint/no-var-requires */
+require('ts-node/register')
+require('tsconfig-paths/register')
+
+const path = require('path')
+const { useModels } = require('hyperstack')
+const { AuthMailer } = require('../src/app/mailers/auth')
+
+useModels(
+  {
+    root: path.join(__dirname, '../src'),
+    migrationsMode: 'auto',
+  },
+  async ({ logger }) => {
+    logger.info('weekly job: starting')
+    // const res = await User.findAll()
+    await AuthMailer.sendWelcome({
+      firstName: 'joe',
+      username: 'joe@example.com',
+    }).deliverLater()
+    logger.info('weekly job: done')
+  }
+)

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
+  "changelog": false,
+  "commit": false,
+  "linked": [],
+  "access": "public",
+  "baseBranch": "master",
+  "updateInternalDependencies": "patch",
+  "ignore": [],
+  "fixed": [
+    [
+      "create-hyperstack",
+      "template-app",
+      "template-blank",
+      "hyperstack",
+      "@hyperstackjs/*"
+    ]
+  ]
+}

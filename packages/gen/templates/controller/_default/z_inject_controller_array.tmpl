@@ -1,0 +1,8 @@
+---
+to: src/app/controllers/index.ts
+inject: true
+before: controllers.push
+skip_if: push(<%= Name %>Controller)
+eof_last: false
+---
+controllers.push(<%= Name %>Controller)

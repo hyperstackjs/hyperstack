@@ -1,0 +1,20 @@
+---
+to: src/test/workers/<%= name %>.spec.ts
+---
+import { test } from '@hyperstackjs/testing'
+import { root } from '../../config/settings'
+import { <%= Name %> } from '../../app/workers/<%= name %>'
+
+const { workers } = test(root)
+
+describe('workers', () => {
+  describe('<%= name %>', () => {
+    workers('should perform now', async (_app) => {
+      const res = await <%= Name %>.performNow({ number: 30 })
+      expect(res).toMatchSnapshot()
+
+      const res2 = await <%= Name %>.performLater({ number: 30 })
+      expect(res2).toMatchSnapshot()
+    })
+  })
+})

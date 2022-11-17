@@ -1,0 +1,24 @@
+---
+to: src/test/models/<%= name %>.spec.ts
+---
+import { test } from '@hyperstackjs/testing'
+import { root } from '../../config/settings'
+import { appContext } from '../../app'
+
+const { models } = test(root)
+
+describe('models', () => {
+  describe('<%= name %>', () => {
+    models('should create with owner', async (_app) => {
+      const { <%= Name %> } = appContext.models()
+      const <%= name.toLowerCase() %> = await <%= Name %>.create({
+      <% let attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+<%- attrs.map(attr=>attr.name + ": " + attr.as.fixture + ",").join("\n") %>
+      <% } else { %>
+        // name: 'a name',
+      <% } %>
+      })
+      expect(<%= name.toLowerCase() %>.toJSON()).toMatchSnapshot()
+    })
+  })
+})

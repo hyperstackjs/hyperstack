@@ -1,0 +1,13 @@
+---
+to: src/app/workers/<%= name %>.ts
+---
+import { HyperWorker, queueAs } from 'hyperstack'
+
+@queueAs('<%= name %>')
+class <%= Name %> extends HyperWorker {
+  async perform({ number }: { number: number }) {
+    return Promise.resolve({ number: number * 4 })
+  }
+}
+
+export { <%= Name %> }

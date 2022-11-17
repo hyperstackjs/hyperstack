@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mailers welcome should send welcome 1`] = `
+Object {
+  "content": undefined,
+  "contentType": "multipart/alternative",
+  "contents": Array [
+    undefined,
+    "Welcome joe, you can now log in.
+  Verify your account with the link below:
+
+  http://localhost/verify?verifyToken=
+",
+    "<html>
+
+<body>
+  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+</body>
+
+</html>
+",
+  ],
+  "envelope": Object {
+    "from": "no-reply@elle-postage.example.com",
+    "to": Array [
+      "joe@example.com",
+    ],
+  },
+  "from": "no-reply@elle-postage.example.com",
+  "messageId": "test-redacted",
+  "originalMessage": Object {
+    "attachments": Array [],
+    "from": "Elle Postage <no-reply@elle-postage.example.com>",
+    "html": "<html>
+
+<body>
+  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+</body>
+
+</html>
+",
+    "subject": "Welcome joe",
+    "text": "Welcome joe, you can now log in.
+  Verify your account with the link below:
+
+  http://localhost/verify?verifyToken=
+",
+    "to": "joe@example.com",
+  },
+  "response": "test-redacted",
+  "subject": "Welcome joe",
+  "to": Array [
+    "joe@example.com",
+  ],
+}
+`;
+
+exports[`mailers welcome should send welcome: manual 1`] = `
+Array [
+  Object {
+    "content": undefined,
+    "contentType": "multipart/alternative",
+    "contents": Array [
+      undefined,
+      "Welcome joe, you can now log in.
+  Verify your account with the link below:
+
+  http://localhost/verify?verifyToken=
+",
+      "<html>
+
+<body>
+  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+</body>
+
+</html>
+",
+    ],
+    "envelope": Object {
+      "from": "no-reply@elle-postage.example.com",
+      "to": Array [
+        "joe@example.com",
+      ],
+    },
+    "from": "no-reply@elle-postage.example.com",
+    "messageId": "test-redacted",
+    "originalMessage": Object {
+      "attachments": Array [],
+      "from": "Elle Postage <no-reply@elle-postage.example.com>",
+      "html": "<html>
+
+<body>
+  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+</body>
+
+</html>
+",
+      "subject": "Welcome joe",
+      "text": "Welcome joe, you can now log in.
+  Verify your account with the link below:
+
+  http://localhost/verify?verifyToken=
+",
+      "to": "joe@example.com",
+    },
+    "response": "test-redacted",
+    "subject": "Welcome joe",
+    "to": Array [
+      "joe@example.com",
+    ],
+  },
+]
+`;

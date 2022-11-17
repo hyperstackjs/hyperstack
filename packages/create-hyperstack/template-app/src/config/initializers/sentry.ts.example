@@ -1,0 +1,31 @@
+import { initializer } from 'hyperstack'
+import * as Sentry from '@sentry/node'
+import * as Tracing from '@sentry/tracing'
+import { dsn } from '../../../sentry-dsn'
+
+export default initializer(async ({ logger }) => ({
+  beforeControllers(app) {
+    Sentry.init({
+      dsn,
+      integrations: [
+        // enable HTTP calls tracing
+        new Sentry.Integrations.Http({ tracing: true }),
+        // enable Express.js middleware tracing
+        new Tracing.Integrations.Express({ app }),
+        new Tracing.Integrations.Postgres({ usePgNative: true }),
+      ],
+
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      tracesSampleRate: 1.0,
+    })
+
+    app.use(Sentry.Handlers.requestHandler())
+    app.use(Sentry.Handlers.tracingHandler())
+  },
+  afterControllers(app) {
+    app.use(Sentry.Handlers.errorHandler())
+    logger().info('initialized Sentry.')
+  },
+}))

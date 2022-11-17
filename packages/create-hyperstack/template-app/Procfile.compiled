@@ -1,0 +1,2 @@
+web: node dist/bin/hyperstack.js start --server
+worker: node dist/bin/hyperstack.js start --worker

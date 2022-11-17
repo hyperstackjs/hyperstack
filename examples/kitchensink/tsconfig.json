@@ -1,0 +1,33 @@
+{
+  "//extends": "pick from: stylomatic/{node-library|react-library|nextjs|base}.json",
+  "extends": "stylomatic/node-library.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "strict": true,
+    "strictNullChecks": false,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "declaration": false,
+    "declarationMap": false,
+    "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+  },
+  "include": [
+    "./testSetup.ts",
+    "./bin",
+    "./src"
+  ],
+  "exclude": [
+    "src/test",
+    "**/__tests__/",
+    "test/fixtures",
+    "testSetup.ts"
+  ]
+}

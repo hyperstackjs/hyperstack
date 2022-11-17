@@ -1,0 +1,29 @@
+.docItemContainer {
+  background: var(--chakra-colors-t_background_article)
+}
+
+.docItemContainer header+*,
+.docItemContainer article>*:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: 997px) {
+  .docItemCol {
+    padding-right: 0;
+  }
+
+  .docItemCol {
+    max-width: 75% !important;
+  }
+
+  /* Prevent hydration FOUC, as the mobile TOC needs to be server-rendered */
+  .tocMobile {
+    display: none;
+  }
+}
+
+@media print {
+  .tocMobile {
+    display: none;
+  }
+}

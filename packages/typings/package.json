@@ -1,0 +1,24 @@
+{
+  "name": "@hyperstackjs/typings",
+  "version": "1.0.28",
+  "author": "Dotan Nahum <dotan@rng0.io>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build:dev": "tsup-node src/* --watch --dts",
+    "build:types": "pnpm build",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && tsup-node src/* --dts",
+    "test": "jest",
+    "test:ci:core": "pnpm test",
+    "test:watch": "jest --watch"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {}
+}

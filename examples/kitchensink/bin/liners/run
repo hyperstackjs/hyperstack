@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+require('ts-node/register')
+require('tsconfig-paths/register')
+
+const { runApp, useWorkers } = require('hyperstack')
+const yargs = require('yargs-parser')
+const { root } = require('../../src/config/settings')
+const { worker, server } = yargs(process.argv)
+if (worker) {
+  useWorkers(
+    {
+      root,
+    },
+    ({ context }) => {
+      const store = context.store()
+      const logger = store.logger
+      const bg = store.workers?.background
+      if (bg === 'inprocess') {
+        logger.warn(
+          'you are running workers inprocess (workers.inprocess=true), worker runner does not make sense.'
+        )
+      }
+    }
+  )
+} else {
+  runApp({
+    root,
+    workersMode: server ? 'producer' : 'duplex',
+  })
+}

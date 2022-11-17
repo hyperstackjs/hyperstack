@@ -1,0 +1,21 @@
+.link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bullet {
+  width: 15px;
+  text-align: center;
+}
+
+.bulletTop {
+  width: 28px;
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+.menuExternalLink {
+  align-items: center;
+}

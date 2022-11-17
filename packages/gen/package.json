@@ -1,0 +1,28 @@
+{
+  "name": "@hyperstackjs/gen",
+  "version": "1.0.28",
+  "private": false,
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build:extras": "build",
+    "build:dev": "tsup-node src/* --watch --dts",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && tsup-node src/* --dts && cp -r templates dist",
+    "test": "jest",
+    "test:ci:core": "pnpm test",
+    "test:watch": "jest --watch"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "enquirer": "^2.3.6",
+    "execa": "^5",
+    "hygen": "^6.2.8",
+    "lodash": "^4.17.21",
+    "zod": "^3.17.3"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+require('ts-node/register')
+require('tsconfig-paths/register')
+
+const path = require('path')
+const { useSeed } = require('hyperstack')
+
+useSeed({
+  root: path.join(__dirname, '../../src'),
+})

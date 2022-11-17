@@ -1,0 +1,15 @@
+{
+  "name": "example-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "esno src/index.ts"
+  },
+  "dependencies": {
+    "@hyperstackjs/hypercontroller": "*",
+    "zod": "^3.17.3"
+  },
+  "devDependencies": {
+    "stylomatic": "0.4.5"
+  }
+}

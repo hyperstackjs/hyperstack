@@ -1,0 +1,73 @@
+---
+to: src/test/requests/<%= names %>/sanity.spec.ts
+---
+import { test } from '@hyperstackjs/testing'
+import { root } from '../../../config/settings'
+import { appContext } from '../../../app'
+
+const {
+  requests,
+  matchers: { matchRequestWithSnapshot },
+} = test(root)
+
+describe('requests', () => {
+  describe('/<%= names %>', () => {
+    requests('all', async (request) => {
+      const { <%= Name %> } = appContext.models()
+      await <%= Name %>.create({
+      <% attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+<%- attrs.map(attr=>attr.name + ": " + attr.as.fixture + ",").join("\n") %>
+      <% } else { %>
+        // name: 'a name',
+      <% } %>
+      })
+
+      await matchRequestWithSnapshot(200, request().get(`/<%= names %>`))
+    })
+    requests('create', async (request) => {
+      await matchRequestWithSnapshot(
+        200,
+        request().post(`/<%= names %>`).send({
+      <% attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+<%- attrs.map(attr=>attr.name + ": " + attr.as.fixture + ",").join("\n") %>
+      <% } else { %>
+        // name: 'a name',
+      <% } %>
+        })
+      )
+    })
+    requests('get :id', async (request) => {
+      const { <%= Name %> } = appContext.models()
+      const <%= name %> = await <%= Name %>.create({
+      <% attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+<%- attrs.map(attr=>attr.name + ": " + attr.as.fixture + ",").join("\n") %>
+      <% } else { %>
+        // name: 'a name',
+      <% } %>
+      })
+
+      await matchRequestWithSnapshot(200, request().get(`/<%= names %>/${<%= name %>.id}`))
+    })
+    requests('update :id', async (request) => {
+      const { <%= Name %> } = appContext.models()
+      const <%= name %> = await <%= Name %>.create({
+      <% attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+<%- attrs.map(attr=>attr.name + ": " + attr.as.fixture + ",").join("\n") %>
+      <% } else { %>
+        // name: 'a name',
+      <% } %>
+      })
+      await request()
+        .post(`/<%= names %>/${<%= name %>.id}`)
+        .send({
+      <% attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+<%- attrs.map(attr=>attr.name + ": " + attr.as.fixtureAlt + ",").join("\n") %>
+      <% } else { %>
+        // name: 'a name',
+      <% } %>
+        })
+
+      await matchRequestWithSnapshot(200, request().get(`/<%= names %>/${<%= name %>.id}`))
+    })
+  })
+})

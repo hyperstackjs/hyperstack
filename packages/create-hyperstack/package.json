@@ -1,0 +1,37 @@
+{
+  "name": "create-hyperstack",
+  "version": "1.0.28",
+  "author": "Dotan Nahum <dotan@rng0.io>",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "create-hyperstack": "index.js",
+    "cpa": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template-app/.gitignore",
+    "template-blank/.gitignore",
+    "template-app/.dockerignore",
+    "template-blank/.dockerignore",
+    "template-*"
+  ],
+  "engines": {
+    "node": ">=14.6.0"
+  },
+  "dependencies": {
+    "colorette": "^2.0.16",
+    "prompts": "^2.4.2",
+    "yargs-parser": "^21.0.1"
+  },
+  "publishConfig": {
+    "executableFiles": [
+      "./template-blank/bin/hyperstack",
+      "./template-blank/bin/example.report",
+      "./template-blank/bin/example.weekly",
+      "./template-app/bin/hyperstack",
+      "./template-app/bin/example.report",
+      "./template-app/bin/example.weekly"
+    ]
+  }
+}

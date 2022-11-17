@@ -1,0 +1,239 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+@import url('/static/fonts/inter/inter.css');
+
+body {
+  font-feature-settings: "kern", "cv02", "cv03", "cv04", "cv11";
+}
+
+.main-wrapper {
+  max-width: var(--chakra-sizes-container-xl2);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar__inner {
+  width: 100%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-width: var(--chakra-sizes-container-lg);
+}
+
+.navbar__logo {
+  height: 48px;
+}
+
+.docs-wrapper body {
+  background: var(--chakra-colors-t_background_docs);
+}
+
+.docs-wrapper .navbar {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05) !important;
+  transition: all 300ms;
+}
+
+.docs-wrapper .navbar__inner {
+  max-width: var(--chakra-sizes-container-xl2);
+}
+
+.footer__logo {
+  max-width: inherit;
+}
+
+.docs-wrapper .main-wrapper {
+  background-color: var(--chakra-colors-t_background_docs)
+}
+
+.menu__list-item-collapsible--active,
+.menu__link--active:not(.menu__link--sublist),
+.menu__link:hover,
+.menu__list-item-collapsible:hover {
+  background: none;
+  color: inherit;
+}
+
+:root {
+  --ifm-color-primary: #FF5F57;
+  --ifm-color-primary-dark: #FF5F57;
+  --ifm-color-primary-darker: #FF5F57;
+  --ifm-color-primary-darkest: #FF5F57;
+  --ifm-color-primary-light: #FF5F57;
+  --ifm-color-primary-lighter: #FF5F57;
+  --ifm-color-primary-lightest: #FF5F57;
+  --ifm-background-surface-color: #fbfaf9;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Inter var';
+  --ifm-heading-font-family: 'Jost';
+  --ifm-toc-border-color: rgba(0, 0, 0, 0.05);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-navbar-search-input-background-color: #F2F3F1;
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(0,0,0)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  --ifm-font-color-base: var(--chakra-colors-t_text);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #FF5F57;
+  --ifm-color-primary-dark: #FF5F57;
+  --ifm-color-primary-darker: #FF5F57;
+  --ifm-color-primary-darkest: #FF5F57;
+  --ifm-color-primary-light: #FF5F57;
+  --ifm-color-primary-lighter: #FF5F57;
+  --ifm-color-primary-lightest: #FF5F57;
+  --ifm-navbar-search-input-background-color: #444;
+  --docusaurus-highlighted-code-line-bg: #484848;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-font-color-base: var(--chakra-colors-canvas);
+}
+
+.alert {
+  border-left-width: 0;
+  box-shadow: none;
+}
+
+.theme-doc-breadcrumbs {
+  display: none;
+}
+
+.docs-wrapper main .container {
+  padding: 0 !important;
+}
+
+.col.col--3 {
+  border-left: 1px solid var(--ifm-toc-border-color);
+}
+
+.table-of-contents {
+  font-size: 14px;
+}
+
+.table-of-contents__left-border {
+  border: 0;
+}
+
+.table-of-contents__link,
+.table-of-contents__link:hover {
+  color: var(--chakra-colors-t_text_weakest);
+}
+
+.table-of-contents__link--active {
+  color: var(--chakra-colors-t_text);
+  font-weight: 600;
+}
+
+.table-of-contents__link--active:hover {
+  color: var(--chakra-colors-t_text);
+}
+
+.docs-wrapper article {
+  padding: 0 3em;
+}
+
+.docs-wrapper article a {
+  color: var(--ifm-link-color);
+  text-decoration: var(--ifm-link-decoration);
+}
+
+.docs-wrapper article img {
+  border-radius: 6px;
+  box-shadow: 0 4px 15px -1px rgb(0 0 0 / 40%);
+}
+
+.pagination-nav {
+  padding: 1em 2em 2em 2em;
+}
+
+.docs-wrapper .navbar {
+  background-color: var(--chakra-colors-t_background_docs);
+}
+
+.menu {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.menu__link--active,
+.menu__link--active:hover {
+  color: var(--chakra-colors-t_text);
+  font-weight: 600;
+}
+
+.menu__list {
+  padding: 1em;
+}
+
+
+.menu__list .menu__list {
+  padding: 0;
+  margin-left: 13px;
+}
+
+.menu__list-item .menu__list {
+  border-left: 1px solid var(--chakra-colors-t_text);
+  ;
+}
+
+.menu__list-item:not(:first-child) {
+  margin-top: 0.5em;
+}
+
+.menu__link {
+  padding: var(--ifm-menu-link-padding-vertical) 5px;
+  color: var(--chakra-colors-t_text_weakest);
+}
+
+.menu__caret {
+  padding: 0 4px;
+}
+
+.menu__caret:before {
+  color: var(--chakra-colors-t_text);
+  transform: rotate(180deg) scale(0.7);
+}
+
+.menu__list-item--collapsed .menu__link--sublist:after,
+.menu__list-item--collapsed .menu__caret:before {
+  transform: rotate(90deg) scale(0.7);
+}
+
+.markdown h1:first-child,
+.markdown h1 {
+  margin: 2em 0 1em 0;
+  font-weight: 500;
+  font-size: 3em;
+  color: var(--chakra-colors-t_text_docs);
+}
+
+.markdown>h2 {
+  font-size: 2.2em;
+  font-weight: 500;
+  margin: 2em 0 1em 0;
+  color: var(--chakra-colors-t_text_docs);
+}
+
+.markdown>h3 {
+  font-size: 1.7em;
+  font-weight: 500;
+  margin: 2em 0 1em 0;
+  color: var(--chakra-colors-t_text_docs);
+}
+
+.markdown>h4 {
+  font-weight: 600;
+  margin: 2em 0 1em 0;
+  color: var(--chakra-colors-t_text_docs);
+}
+
+code {
+  border: 0;
+  vertical-align: inherit;
+}

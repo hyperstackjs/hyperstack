@@ -1,0 +1,31 @@
+---
+to: src/app/models/<%= name %>.ts
+---
+import { HyperModel, Schema } from 'hyperstack'
+const { AllowNull, Column, DataType, Table } = Schema
+
+@Table
+class <%= Name %> extends HyperModel<Partial<<%= Name %>>> {
+<% let attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+<%= attrs.map(attr=>attr.as.model.map(ln=>"  "+ln).join("\n")).join("\n\n") %>
+
+  toJSON() {
+    const { 
+<%= attrs.map(attr=>"      "+attr.name).join(",\n") %>
+    } = this.get() as any
+    return { 
+<%= attrs.map(attr=>"      "+attr.name).join(",\n") %>
+    }
+  }
+<% } else { %>
+  @AllowNull(false)
+  @Column
+  name: string
+
+  toJSON() {
+    const { name } = this.get() as any
+    return { name }
+  }
+<% } %>
+}
+export { <%= Name %> }

@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-var-requires */
+require('ts-node/register')
+require('tsconfig-paths/register')
+
+const path = require('path')
+const yargs = require('yargs-parser')
+const { useTasks } = require('hyperstack')
+
+useTasks(
+  {
+    root: path.join(__dirname, '../../src'),
+  },
+  yargs(process.argv)
+)

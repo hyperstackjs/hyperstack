@@ -1,0 +1,8 @@
+---
+to: src/app/workers/index.ts
+inject: true
+append: true
+eof_last: false
+skip_if: <%= Name %>
+---
+export { <%= Name %> } from './<%= name %>'

@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseAttrs model but no attributes 1`] = `Array []`;
+
+exports[`parseAttrs model but no attributes 2`] = `Array []`;
+
+exports[`parseAttrs model but no attributes 3`] = `Array []`;
+
+exports[`parseAttrs parses 1`] = `
+Array [
+  Object {
+    "as": Object {
+      "fixture": Array [
+        "'string'",
+      ],
+      "fixtureAlt": Array [
+        "'updated'",
+      ],
+      "migration": Array [
+        "t.string('title')",
+      ],
+      "model": Array [
+        "@Column",
+        "title: string",
+      ],
+      "zod": Array [
+        "title: z.string()",
+      ],
+    },
+    "name": "title",
+  },
+  Object {
+    "as": Object {
+      "fixture": Array [
+        "'some text'",
+      ],
+      "fixtureAlt": Array [
+        "'a different text'",
+      ],
+      "migration": Array [
+        "t.text('content')",
+      ],
+      "model": Array [
+        "@Column(DataType.TEXT)",
+        "content: string",
+      ],
+      "zod": Array [
+        "content: z.string()",
+      ],
+    },
+    "name": "content",
+  },
+  Object {
+    "as": Object {
+      "fixture": Array [
+        "5150",
+      ],
+      "fixtureAlt": Array [
+        "1337",
+      ],
+      "migration": Array [
+        "t.int('count')",
+      ],
+      "model": Array [
+        "@Column",
+        "count: number",
+      ],
+      "zod": Array [
+        "count: z.number()",
+      ],
+    },
+    "name": "count",
+  },
+  Object {
+    "as": Object {
+      "fixture": Array [
+        "{\\"hello\\": \\"world\\"}",
+      ],
+      "fixtureAlt": Array [
+        "{\\"hello\\": \\"crewl world\\"}",
+      ],
+      "migration": Array [
+        "t.json('settings')",
+      ],
+      "model": Array [
+        "@Column(DataType.JSON)",
+        "settings: any",
+      ],
+      "zod": Array [
+        "settings: z.any()",
+      ],
+    },
+    "name": "settings",
+  },
+  Object {
+    "as": Object {
+      "fixture": Array [
+        "new Date('1986-03-24')",
+      ],
+      "fixtureAlt": Array [
+        "new Date('1981-09-08')",
+      ],
+      "migration": Array [
+        "t.date('createdAt')",
+      ],
+      "model": Array [
+        "@Column",
+        "createdAt: Date",
+      ],
+      "zod": Array [
+        "createdAt: z.date()",
+      ],
+    },
+    "name": "createdAt",
+  },
+  Object {
+    "as": Object {
+      "fixture": Array [
+        "true",
+      ],
+      "fixtureAlt": Array [
+        "false",
+      ],
+      "migration": Array [
+        "t.bool('isDeleted')",
+      ],
+      "model": Array [
+        "@Column",
+        "isDeleted: boolean",
+      ],
+      "zod": Array [
+        "isDeleted: z.boolean()",
+      ],
+    },
+    "name": "isDeleted",
+  },
+]
+`;
+
+exports[`parseAttrs parses 2`] = `
+Array [
+  Object {
+    "as": Object {
+      "fixture": Array [
+        "'string'",
+      ],
+      "fixtureAlt": Array [
+        "'updated'",
+      ],
+      "migration": Array [
+        "t.string('title')",
+      ],
+      "model": Array [
+        "@Column",
+        "title: string",
+      ],
+      "zod": Array [
+        "title: z.string()",
+      ],
+    },
+    "name": "title",
+  },
+  Object {
+    "as": Object {
+      "fixture": Array [
+        "'some text'",
+      ],
+      "fixtureAlt": Array [
+        "'a different text'",
+      ],
+      "migration": Array [
+        "t.text('content')",
+      ],
+      "model": Array [
+        "@Column(DataType.TEXT)",
+        "content: string",
+      ],
+      "zod": Array [
+        "content: z.string()",
+      ],
+    },
+    "name": "content",
+  },
+]
+`;

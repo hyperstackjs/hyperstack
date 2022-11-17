@@ -1,0 +1,29 @@
+---
+to: src/app/controllers/<%= name %>.ts
+---
+import {
+  Controller,
+  Get,
+  HttpResponseOK,
+  requires,
+} from 'hyperstack'
+import type { Request, Response } from 'hyperstack'
+
+import { z } from 'zod'
+
+@Controller('<%= name %>')
+export class <%= Name %>Controller {
+  postparams = requires(
+    z.object({
+      post: z.object({ title: z.string(), body: z.string() }),
+    })
+  )
+
+  @Get()
+  async index(req: Request, _res: Response) {
+    const {
+      post: { title },
+    } = this.postparams(req.body)
+    return new HttpResponseOK({ ok: title, its: 'alright' })
+  }
+}

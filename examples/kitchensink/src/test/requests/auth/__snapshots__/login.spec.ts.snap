@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`requests /auth/login should login 1`] = `
+Object {
+  "body": Object {
+    "token": "test-redacted",
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "252",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 200,
+}
+`;
+
+exports[`requests /auth/login should not login on bad credentials 1`] = `
+Object {
+  "body": Object {
+    "error": "incorrect username or password",
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "42",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "www-authenticate": "",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 401,
+}
+`;
+
+exports[`requests /auth/login should validate 1`] = `
+Object {
+  "body": Object {
+    "error": "incorrect username or password",
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "42",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "www-authenticate": "",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 401,
+}
+`;
+
+exports[`requests /auth/login should validate 2`] = `
+Object {
+  "body": Object {
+    "error": "validation",
+    "validationErrors": Array [
+      Object {
+        "code": "invalid_string",
+        "message": "Invalid email",
+        "path": Array [
+          "username",
+        ],
+        "validation": "email",
+      },
+    ],
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "136",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 400,
+}
+`;
+
+exports[`requests /auth/login should validate 3`] = `
+Object {
+  "body": Object {
+    "error": "validation",
+    "validationErrors": Array [
+      Object {
+        "code": "too_small",
+        "inclusive": true,
+        "message": "String must contain at least 5 character(s)",
+        "minimum": 5,
+        "path": Array [
+          "password",
+        ],
+        "type": "string",
+      },
+    ],
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "185",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 400,
+}
+`;

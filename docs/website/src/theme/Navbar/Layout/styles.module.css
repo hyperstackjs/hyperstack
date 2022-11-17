@@ -1,0 +1,8 @@
+.navbarHideable {
+  box-shadow: none;
+}
+
+.navbarHidden {
+  box-shadow: var(--ifm-navbar-shadow);
+  transition: all 300ms;
+}

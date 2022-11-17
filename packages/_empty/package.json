@@ -1,0 +1,19 @@
+{
+  "name": "empty",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:dev": "tsup-node src/* --watch --dts",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && tsup-node src/* --dts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {}
+}

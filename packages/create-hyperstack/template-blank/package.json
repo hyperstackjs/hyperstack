@@ -1,0 +1,44 @@
+{
+  "name": "template-blank",
+  "version": "1.0.28",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev bin/hyperstack.ts start",
+    "build:watch": "tscp && concurrently -n typescript,aliases,public 'tsc -w' 'tsc-alias -w'",
+    "build:dev": "cd dist && node-dev bin/hyperstack.js start",
+    "build": "tsc && tsc-alias && tscp",
+    "test": "jest --runInBand --logHeapUsage --passWithNoTests",
+    "test:ci:apps": "pnpm test"
+  },
+  "dependencies": {
+    "@hyperstackjs/initializer-jwt": "1.0.28",
+    "hyperstack": "1.0.28",
+    "lodash": "^4.17.21",
+    "sqlite3": "^5.0.8",
+    "ts-node": "^10.8.1",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "4.7.4",
+    "zod": "^3.17.3"
+  },
+  "devDependencies": {
+    "@hyperstackjs/testing": "1.0.28",
+    "@types/jest": "^28.1.5",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^17.0.38",
+    "@types/validator": "^13.7.2",
+    "concurrently": "^7.2.1",
+    "jest": "^28.1.1",
+    "jest-extended": "^3.0.1",
+    "mkdirp": "^1.0.4",
+    "node-dev": "^7.4.3",
+    "node-notifier": "10.0.1",
+    "rimraf": "^3.0.2",
+    "stylomatic": "0.4.5",
+    "time-require": "^0.1.2",
+    "ts-jest": "^28.0.4",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.6.9",
+    "tsup": "^6.1.0",
+    "typescript-cp": "^0.1.5"
+  }
+}

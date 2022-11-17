@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tasks export-notes should work 1`] = `
+"content|title|pid
+interesting notetest-redacted"
+`;

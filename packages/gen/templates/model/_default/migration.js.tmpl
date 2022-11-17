@@ -1,0 +1,43 @@
+---
+to: src/config/db/migrate/<%= ts %>_<%= name || 'migration' %>.ts
+---
+// regarding transactional DDL, not all dialects support it,
+// so use it as you may.
+// see https://github.com/sequelize/sequelize/issues/7902
+
+module.exports = {
+  up: async ({ query, t }:any) => {
+
+<% let attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+    await query.createTable(
+      '<%= Name %>',
+      t.build(
+        t.intPK('id'),
+<%- attrs.map(attr=>attr.as.migration.map(ln=>"        "+ln).join("\n")).join(",\n") %>,
+        t.timestamps(),
+      )
+    )
+<% } else { %>
+    await query.createTable(
+      '<%= Name %>',
+      t.build(
+        t.intPK('id'),
+        t.uniqueString('name'),
+    /* Add columns:
+        t.uniqueString('username'),
+        t.nonNullString('password'),
+        t.nonNullString('lastName'),
+    */
+        t.timestamps(),
+      )
+    )
+<% } %>
+    // unique constraints already add an implied index in most
+    // database engines. if you wanted to do it manually, this is how
+    // you would do it:
+    // await query.addIndex('<%= Name %>', ['username'], { unique: true })
+  },
+  down: async ({ query }:any) => {
+    await query.dropTable('<%= Name %>')
+  },
+}

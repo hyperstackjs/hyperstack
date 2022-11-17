@@ -1,0 +1,5 @@
+---
+sh: yarn eslint --fix src/app/models/<%= name %>.ts src/app/models/index.ts  src/test/models/<%= name %>.spec.ts src/config/db/migrate/<%= ts %>_<%= name || 'migration' %>.js
+spinner: running eslint
+sh_ignore_exit: true
+---

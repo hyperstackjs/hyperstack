@@ -1,0 +1,61 @@
+---
+to: src/app/controllers/<%= names %>.ts
+---
+import {
+  Controller,
+  Get,
+  Post,
+  notfound,
+  ok,
+  requires,
+} from 'hyperstack'
+import type { Request } from 'hyperstack'
+import { z } from 'zod'
+import { <%= Name %> } from '../models/<%= name %>'
+
+const require<%= Name %>Params = requires(
+  z.object({
+      <% let attrs = h.parseAttrs(_); if(attrs.length > 0) { %>
+<%- attrs.map(attr=>attr.as.zod.join("\n") + ",").join("\n") %>
+      <% } else { %>
+        // name: 'a name',
+      <% } %>
+  })
+)
+const require<%= Name %>Id = requires(z.object({ id: z.string() }))
+
+@Controller('<%= names %>')
+export class <%= Names %>Controller {
+  async get<%= Name %>(req: Request) {
+    const <%= name %> = await <%= Name %>.findOne({ where: require<%= Name %>Id(req.params) })
+    if (!<%= name %>) {
+      throw notfound('<%= name %> not found')
+    }
+    return <%= name %>
+  }
+
+  @Get()
+  async list() {
+    const <%= names %> = await <%= Name %>.findAll()
+    return ok({ <%= names %> })
+  }
+
+  @Post()
+  async create(req: Request) {
+    const <%= name %> = await <%= Name %>.create(require<%= Name %>Params(req.body))
+    return ok({ <%= name %> })
+  }
+
+  @Get(':id')
+  async get(req: Request) {
+    const <%= name %> = await this.get<%= Name %>(req)
+    return ok({ <%= name %> })
+  }
+
+  @Post(':id')
+  async update(req: Request) {
+    const <%= name %> = await this.get<%= Name %>(req)
+    await <%= name %>.update(require<%= Name %>Params(req.body))
+    return ok({ <%= name %> })
+  }
+}

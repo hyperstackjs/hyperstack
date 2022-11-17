@@ -1,0 +1,5 @@
+packages:
+  - "examples/*"
+  - "packages/*"
+  - "packages/create-hyperstack/template-app"
+  - "packages/create-hyperstack/template-blank"

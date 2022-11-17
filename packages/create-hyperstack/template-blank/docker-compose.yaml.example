@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  redis:
+    image: redis
+    command: redis-server
+    ports:
+      - "6379:6379"
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=app
+      - POSTGRES_DB=app_test
+    ports:
+      - "5432:5432"

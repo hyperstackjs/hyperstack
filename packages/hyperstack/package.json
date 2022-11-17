@@ -1,0 +1,43 @@
+{
+  "name": "hyperstack",
+  "version": "1.0.28",
+  "author": "Dotan Nahum <dotan@rng0.io>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build:dev": "tsup-node src/* --watch --dts",
+    "build:ties": "pnpm build",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && tsup-node src/* --dts",
+    "test": "jest --runInBand",
+    "test:ci:core": "pnpm test",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.1.0",
+    "@hyperstackjs/gen": "1.0.28",
+    "@hyperstackjs/hypercontroller": "1.0.28",
+    "@hyperstackjs/hypermodel": "1.0.28",
+    "@hyperstackjs/hyperportal": "1.0.28",
+    "@hyperstackjs/hyperworker": "1.0.28",
+    "as-table": "^1.0.55",
+    "colorette": "^2.0.16",
+    "debug": "^4.3.4",
+    "express-pino-logger": "^7.0.0",
+    "glob": "^8.0.3",
+    "lodash": "^4.17.21",
+    "pino": "^8.0.0",
+    "pino-pretty": "^8.0.0",
+    "uuid": "^8.3.2",
+    "yargs": "^17.5.1",
+    "yargs-interactive": "^3.0.1",
+    "yargs-parser": "^21.0.1",
+    "zod": "^3.17.3"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.8"
+  }
+}

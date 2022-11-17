@@ -1,0 +1,619 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes exports 1`] = `
+Object {
+  "Api": Object {
+    "actions": Array [
+      Object {
+        "action": "foobar",
+        "routes": Array [
+          Object {
+            "parsedPath": Array [
+              "/api/foobar",
+            ],
+            "path": "/foobar",
+            "verb": "get",
+          },
+        ],
+        "schema": undefined,
+      },
+      Object {
+        "action": "noreqres",
+        "routes": Array [
+          Object {
+            "parsedPath": Array [
+              "/api/no-reqres",
+            ],
+            "path": "/no-reqres",
+            "verb": "get",
+          },
+        ],
+        "schema": undefined,
+      },
+      Object {
+        "action": "throwme",
+        "routes": Array [
+          Object {
+            "parsedPath": Array [
+              "/api/throw-me",
+            ],
+            "path": "/throw-me",
+            "verb": "get",
+          },
+        ],
+        "schema": undefined,
+      },
+      Object {
+        "action": "createPost",
+        "routes": Array [
+          Object {
+            "parsedPath": Array [
+              "/api/post/create",
+            ],
+            "path": "/post/create",
+            "verb": "post",
+          },
+        ],
+        "schema": Object {
+          "zod": ZodObject {
+            "_cached": null,
+            "_def": Object {
+              "catchall": ZodNever {
+                "_def": Object {
+                  "typeName": "ZodNever",
+                },
+                "and": [Function],
+                "array": [Function],
+                "default": [Function],
+                "describe": [Function],
+                "isNullable": [Function],
+                "isOptional": [Function],
+                "nullable": [Function],
+                "nullish": [Function],
+                "optional": [Function],
+                "or": [Function],
+                "parse": [Function],
+                "parseAsync": [Function],
+                "promise": [Function],
+                "refine": [Function],
+                "refinement": [Function],
+                "safeParse": [Function],
+                "safeParseAsync": [Function],
+                "spa": [Function],
+                "superRefine": [Function],
+                "transform": [Function],
+              },
+              "shape": [Function],
+              "typeName": "ZodObject",
+              "unknownKeys": "strip",
+            },
+            "and": [Function],
+            "array": [Function],
+            "augment": [Function],
+            "default": [Function],
+            "describe": [Function],
+            "extend": [Function],
+            "isNullable": [Function],
+            "isOptional": [Function],
+            "nonstrict": [Function],
+            "nullable": [Function],
+            "nullish": [Function],
+            "optional": [Function],
+            "or": [Function],
+            "parse": [Function],
+            "parseAsync": [Function],
+            "promise": [Function],
+            "refine": [Function],
+            "refinement": [Function],
+            "safeParse": [Function],
+            "safeParseAsync": [Function],
+            "spa": [Function],
+            "superRefine": [Function],
+            "transform": [Function],
+          },
+        },
+      },
+      Object {
+        "action": "updatePost",
+        "routes": Array [
+          Object {
+            "parsedPath": Array [
+              "/api/post/update",
+            ],
+            "path": "/post/update",
+            "verb": "get",
+          },
+          Object {
+            "parsedPath": Array [
+              "/api/post/update",
+            ],
+            "path": "/post/update",
+            "verb": "post",
+          },
+        ],
+        "schema": undefined,
+      },
+      Object {
+        "action": "validationErrors",
+        "routes": Array [
+          Object {
+            "parsedPath": Array [
+              "/api/validation-error",
+            ],
+            "path": "/validation-error",
+            "verb": "get",
+          },
+        ],
+        "schema": undefined,
+      },
+      Object {
+        "action": "rawObject",
+        "routes": Array [
+          Object {
+            "parsedPath": Array [
+              "/api/raw-object",
+              Object {
+                "modifier": "",
+                "name": "id",
+                "pattern": "[^\\\\/#\\\\?]+?",
+                "prefix": "/",
+                "suffix": "",
+              },
+            ],
+            "path": "/raw-object/:id",
+            "verb": "get",
+          },
+        ],
+        "schema": undefined,
+      },
+      Object {
+        "action": "postforuser",
+        "routes": Array [
+          Object {
+            "parsedPath": Array [
+              "/api/users",
+              Object {
+                "modifier": "",
+                "name": "uid",
+                "pattern": "[^\\\\/#\\\\?]+?",
+                "prefix": "/",
+                "suffix": "",
+              },
+              "/posts",
+              Object {
+                "modifier": "",
+                "name": "pid",
+                "pattern": "[^\\\\/#\\\\?]+?",
+                "prefix": "/",
+                "suffix": "",
+              },
+            ],
+            "path": "/users/:uid/posts/:pid",
+            "verb": "get",
+          },
+        ],
+        "schema": undefined,
+      },
+    ],
+    "path": "/api",
+  },
+}
+`;
+
+exports[`routes exports snippets 1`] = `
+Array [
+  Object {
+    "description": "No description available",
+    "method": "POST",
+    "resource": "create",
+    "snippets": Array [
+      Object {
+        "content": "curl -X POST \\\\
+  http://localhost:5150/api/post/create \\\\
+  -H 'content-type: application/json' \\\\
+  -d '{\\"post\\":{\\"title\\":\\"string\\",\\"body\\":\\"string\\"}}'",
+        "id": "shell_curl",
+        "mimeType": "application/json",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "echo '{\\"post\\":{\\"title\\":\\"string\\",\\"body\\":\\"string\\"}}' |  \\\\
+  http POST http://localhost:5150/api/post/create \\\\
+  content-type:application/json",
+        "id": "shell_httpie",
+        "mimeType": "application/json",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method POST \\\\
+  --header 'content-type: application/json' \\\\
+  --body-data '{\\"post\\":{\\"title\\":\\"string\\",\\"body\\":\\"string\\"}}' \\\\
+  -O \\\\
+  - http://localhost:5150/api/post/create",
+        "id": "shell_wget",
+        "mimeType": "application/json",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/post/create",
+  },
+  Object {
+    "description": "No description available",
+    "method": "GET",
+    "resource": "foobar",
+    "snippets": Array [
+      Object {
+        "content": "curl -X GET \\\\
+  http://localhost:5150/api/foobar",
+        "id": "shell_curl",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "http GET http://localhost:5150/api/foobar",
+        "id": "shell_httpie",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method GET \\\\
+  -O \\\\
+  - http://localhost:5150/api/foobar",
+        "id": "shell_wget",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/foobar",
+  },
+  Object {
+    "description": "No description available",
+    "method": "GET",
+    "resource": "no-reqres",
+    "snippets": Array [
+      Object {
+        "content": "curl -X GET \\\\
+  http://localhost:5150/api/no-reqres",
+        "id": "shell_curl",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "http GET http://localhost:5150/api/no-reqres",
+        "id": "shell_httpie",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method GET \\\\
+  -O \\\\
+  - http://localhost:5150/api/no-reqres",
+        "id": "shell_wget",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/no-reqres",
+  },
+  Object {
+    "description": "No description available",
+    "method": "GET",
+    "resource": "posts",
+    "snippets": Array [
+      Object {
+        "content": "curl -X GET \\\\
+  http://localhost:5150/api/users/%7Buid%7D/posts/%7Bpid%7D",
+        "id": "shell_curl",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "http GET http://localhost:5150/api/users/%7Buid%7D/posts/%7Bpid%7D",
+        "id": "shell_httpie",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method GET \\\\
+  -O \\\\
+  - http://localhost:5150/api/users/%7Buid%7D/posts/%7Bpid%7D",
+        "id": "shell_wget",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/users/{uid}/posts/{pid}",
+  },
+  Object {
+    "description": "No description available",
+    "method": "GET",
+    "resource": "raw-object",
+    "snippets": Array [
+      Object {
+        "content": "curl -X GET \\\\
+  http://localhost:5150/api/raw-object/%7Bid%7D",
+        "id": "shell_curl",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "http GET http://localhost:5150/api/raw-object/%7Bid%7D",
+        "id": "shell_httpie",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method GET \\\\
+  -O \\\\
+  - http://localhost:5150/api/raw-object/%7Bid%7D",
+        "id": "shell_wget",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/raw-object/{id}",
+  },
+  Object {
+    "description": "No description available",
+    "method": "GET",
+    "resource": "throw-me",
+    "snippets": Array [
+      Object {
+        "content": "curl -X GET \\\\
+  http://localhost:5150/api/throw-me",
+        "id": "shell_curl",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "http GET http://localhost:5150/api/throw-me",
+        "id": "shell_httpie",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method GET \\\\
+  -O \\\\
+  - http://localhost:5150/api/throw-me",
+        "id": "shell_wget",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/throw-me",
+  },
+  Object {
+    "description": "No description available",
+    "method": "GET",
+    "resource": "update",
+    "snippets": Array [
+      Object {
+        "content": "curl -X GET \\\\
+  http://localhost:5150/api/post/update",
+        "id": "shell_curl",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "http GET http://localhost:5150/api/post/update",
+        "id": "shell_httpie",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method GET \\\\
+  -O \\\\
+  - http://localhost:5150/api/post/update",
+        "id": "shell_wget",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/post/update",
+  },
+  Object {
+    "description": "No description available",
+    "method": "POST",
+    "resource": "update",
+    "snippets": Array [
+      Object {
+        "content": "curl -X POST \\\\
+  http://localhost:5150/api/post/update",
+        "id": "shell_curl",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "http POST http://localhost:5150/api/post/update",
+        "id": "shell_httpie",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method POST \\\\
+  -O \\\\
+  - http://localhost:5150/api/post/update",
+        "id": "shell_wget",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/post/update",
+  },
+  Object {
+    "description": "No description available",
+    "method": "GET",
+    "resource": "validation-error",
+    "snippets": Array [
+      Object {
+        "content": "curl -X GET \\\\
+  http://localhost:5150/api/validation-error",
+        "id": "shell_curl",
+        "title": "Shell + Curl",
+      },
+      Object {
+        "content": "http GET http://localhost:5150/api/validation-error",
+        "id": "shell_httpie",
+        "title": "Shell + Httpie",
+      },
+      Object {
+        "content": "wget -q \\\\
+  --method GET \\\\
+  -O \\\\
+  - http://localhost:5150/api/validation-error",
+        "id": "shell_wget",
+        "title": "Shell + Wget",
+      },
+    ],
+    "url": "http://localhost:5150/api/validation-error",
+  },
+]
+`;
+
+exports[`routes exports to open api 1`] = `
+Object {
+  "info": Object {
+    "title": "",
+    "version": "",
+  },
+  "openapi": "3.0.0",
+  "paths": Object {
+    "/api/foobar": Object {
+      "get": Object {
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+    },
+    "/api/no-reqres": Object {
+      "get": Object {
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+    },
+    "/api/post/create": Object {
+      "post": Object {
+        "parameters": Array [],
+        "requestBody": Object {
+          "content": Object {
+            "application/json": Object {
+              "schema": Object {
+                "properties": Object {
+                  "post": Object {
+                    "properties": Object {
+                      "body": Object {
+                        "type": "string",
+                      },
+                      "title": Object {
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "title",
+                      "body",
+                    ],
+                    "type": "object",
+                  },
+                },
+                "required": Array [
+                  "post",
+                ],
+                "type": "object",
+              },
+            },
+          },
+          "required": true,
+        },
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+    },
+    "/api/post/update": Object {
+      "get": Object {
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+      "post": Object {
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+    },
+    "/api/raw-object/{id}": Object {
+      "get": Object {
+        "parameters": Array [
+          Object {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": Object {
+              "type": "string",
+            },
+          },
+        ],
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+    },
+    "/api/throw-me": Object {
+      "get": Object {
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+    },
+    "/api/users/{uid}/posts/{pid}": Object {
+      "get": Object {
+        "parameters": Array [
+          Object {
+            "in": "path",
+            "name": "uid",
+            "required": true,
+            "schema": Object {
+              "type": "string",
+            },
+          },
+          Object {
+            "in": "path",
+            "name": "pid",
+            "required": true,
+            "schema": Object {
+              "type": "string",
+            },
+          },
+        ],
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+    },
+    "/api/validation-error": Object {
+      "get": Object {
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "description": "OK",
+          },
+        },
+      },
+    },
+  },
+  "servers": Array [
+    Object {
+      "url": "http://localhost:5150",
+    },
+  ],
+}
+`;

@@ -1,0 +1,36 @@
+{
+  "name": "kitchensink",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev bin/hyperstack.ts run",
+    "build:watch": "concurrently -n typescript,aliases 'tsc -w' 'tsc-alias -w'",
+    "build": "rimraf dist && tsc && tsc-alias && tscp",
+    "test": "jest --runInBand --logHeapUsage",
+    "test:ci:apps": "pnpm test"
+  },
+  "dependencies": {
+    "@hyperstackjs/initializer-jwt": "*",
+    "@sentry/node": "^6.19.7",
+    "@sentry/tracing": "^6.19.7",
+    "jsonexport": "^3.2.0",
+    "nodemailer": "^6.7.3",
+    "hyperstack": "*",
+    "pg": "^8.7.3",
+    "pg-native": "^3.0.0",
+    "tsconfig-paths": "^4.0.0",
+    "zod": "^3.11.6"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.2.0",
+    "@hyperstackjs/testing": "*",
+    "@types/jsonexport": "^3.0.2",
+    "@types/nodemailer": "^6.4.4",
+    "jest-extended": "^3.0.1",
+    "stylomatic": "0.4.5",
+    "time-require": "^0.1.2",
+    "ts-node": "^10.8.1",
+    "ts-node-dev": "^1.1.8",
+    "tsc-alias": "^1.6.9"
+  }
+}

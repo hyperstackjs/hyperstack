@@ -1,0 +1,21 @@
+---
+to: src/test/requests/<%= name %>/sanity.spec.ts
+---
+import { test } from '@hyperstackjs/testing'
+import { root } from '../../../config/settings'
+// import { appContext } from '../../../app'
+
+const {
+  requests,
+  matchers: { matchRequestWithSnapshot },
+} = test(root)
+
+describe('requests', () => {
+  describe('/<%= name %>', () => {
+    requests('get', async (request, _app, _server) => {
+      // const { Note } = appContext.models()
+
+      await matchRequestWithSnapshot(200, request().get('/<%= name %>'))
+    })
+  })
+})
