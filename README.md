@@ -2,7 +2,7 @@
 
 Hyperstack is a modern Node.js web framework for the pragmatic programmer.
 
-
+![](docs/website/docs/00_getting-started/banner.png)
 
 
 :white_check_mark: _Test driven everything :notes:_
@@ -44,7 +44,7 @@ That's it, you can `curl` your app:
 curl http://localhost:5150/
 ```
 
-And then, continue to the README.md in your newly generated app.
+And then, continue [to the website to learn more](https://hyperstackjs.io/docs/getting-started/).
 
 ## What's with the EVH references?
 
