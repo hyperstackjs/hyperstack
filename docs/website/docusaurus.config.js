@@ -149,7 +149,7 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/hyperstack',
+                href: 'https://stackoverflow.com/questions/tagged/hyperstackjs',
               },
               {
                 label: 'Twitter',
