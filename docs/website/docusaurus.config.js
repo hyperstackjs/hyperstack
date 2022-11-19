@@ -142,6 +142,10 @@ const config = {
                 label: 'Deployment',
                 to: '/docs/getting-started/deploying',
               },
+              {
+                label: 'FAQ',
+                to: '/docs/faq/comparison',
+              },
             ],
           },
           {
