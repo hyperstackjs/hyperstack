@@ -8,6 +8,11 @@ const forceHS512 = (jwtOptions: any) =>
     ? { ...jwtOptions, algorithm: 'HS512' } // force hard crypto
     : { algorithm: 'HS512' }
 
+const forceHS512Verify = (jwtOptions: any) =>
+  jwtOptions
+    ? { ...jwtOptions, algorithms: ['HS512'] } // force hard crypto
+    : { algorithms: ['HS512'] }
+
 // decorator creator
 const createAuth = (verify: any, { loader, bearer }: any) => {
   const permit = new Bearer(
@@ -65,7 +70,6 @@ const authWithJWT = ({
   }
   const resolvedOptions = jwtOptions || {
     expiresIn: '14d',
-    algorithm: 'HS512',
   }
 
   const signJWT = (payload: any) =>
@@ -73,7 +77,7 @@ const authWithJWT = ({
 
   const verifyJWT = (token: string) =>
     new Promise((resolve, reject) => {
-      verify(token, secret, forceHS512(resolvedOptions), (err, value) => {
+      verify(token, secret, forceHS512Verify(resolvedOptions), (err, value) => {
         if (err) {
           reject(err)
         } else {

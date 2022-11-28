@@ -57,3 +57,13 @@ For truncating etc. I actually give you the option through configuration. You ca
 - truncate
 
 This was a small layer I added, to solve all the "database_cleaner" and all of the wiring ceremonies I always did in Rails.
+
+
+## Can I build a multi-tenant architecture with dedicated DB per tenant?
+
+If this is a _real_ 1:1 mapping between customer and database, you can use the environments feature in _Hyperstack_ to figure out, and wire up a connection for a tenant when an app comes up.
+
+You can dynamically create an environment (when a server starts) with anything you need. For example you can write a custom environment script that goes to a catalog DB table, understands which server it is, which pod, which client, and grabs the correct connection string for the database. Then the app will continue to load as usual.
+
+It's important to note that once an app goes online, it opens a single connection to a specific database and it stays that way through every request. So if you have smart load routing, or specific data regulation requirements -- you need to have a load balancer to direct requests to the right app serving from the right database (and chances are, you already have such a thing because of regulation or scale).
+
