@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/testing",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "author": "Dotan Nahum <dotan@rng0.io>",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
   "dependencies": {
     "debug": "^4.3.4",
     "lodash": "^4.17.21",
-    "hyperstack": "1.0.28",
+    "hyperstack": "1.0.29",
     "supertest": "^6.2.3",
     "testcontainers": "^8.10.1"
   },

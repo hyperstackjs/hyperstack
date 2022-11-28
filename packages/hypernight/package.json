@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/hypernight",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "An updated and tweaked fork of @overnight/core to be used in hyperstack",
   "author": "Sean Maxwell & Hyperstackjs Authors",
   "license": "MIT",

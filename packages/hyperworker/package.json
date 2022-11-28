@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/hyperworker",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "",
   "author": "Dotan Nahum <dotan@rng0.io>",
   "license": "MIT",
@@ -32,6 +32,6 @@
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@hyperstackjs/typings": "1.0.28"
+    "@hyperstackjs/typings": "1.0.29"
   }
 }
