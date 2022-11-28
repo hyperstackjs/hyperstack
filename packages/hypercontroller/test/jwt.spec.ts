@@ -12,6 +12,7 @@ import { expectWithSnapshot, logger } from './utils'
 
 const signJWT = (payload: any) =>
   sign(payload, 'testing-secret', {
+    algorithm: 'HS512',
     expiresIn: '1h',
   })
 
@@ -40,6 +41,17 @@ describe('hypercontroller/jwt', () => {
     const key = signJWT({ email: 'joe@ericsson.com' })
     await expectWithSnapshot(
       200,
+      request(app)
+        .get('/api/foobar')
+        .set({ Authorization: `Bearer ${key}` })
+    )
+  })
+  it('fails - JWT should only accept HS512', async () => {
+    const key = sign({ email: 'joe@ericsson.com' }, 'testing-secret', {
+      expiresIn: '1h',
+    })
+    await expectWithSnapshot(
+      401,
       request(app)
         .get('/api/foobar')
         .set({ Authorization: `Bearer ${key}` })
