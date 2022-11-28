@@ -245,7 +245,7 @@ $ pnpm add pg pg-native
 And commit all changes. In production, _Postgres_ is the default so no need to re-configure anything.
 
 
-## Deploy!
+### Deploy!
 
 This is how _Heroku_ will know what to run for you. Assuming your app is in a Git repo, and everything is committed, and you have `heroku` as the origin, this will deploy your app:
 
@@ -259,11 +259,11 @@ You'll now see _Heroku_'s own output as it deploys your app. When it's finished 
 * **Use _Redis_** as a queue for background jobs (real background jobs that can scale)
 * **Send emails** such as registration and reset password emails
 
-## Database Operations
+### Database Operations
 
 By default **your database is configured to sync its structure based on your models**. In production, **you should use explicit migrations** to bring your database structure up to date, [read more here](./02_development.md).
 
-### Migrations
+#### Migrations
 
 To run migrations in _Heroku_ you use `heroku run`:
 
@@ -273,7 +273,7 @@ $ heroku run bin/hyperstack migrate
 
 This will spin up a custom _Heroku_ dyno, which **will run this over your code that already exists there**. It will bring your database up to date.
 
-### Looking at Data
+#### Looking at Data
 
 You can actually "connect to production" using _Portal_:
 
@@ -286,7 +286,7 @@ With a fast enough internet connection, **this will feel like you're running stu
 Now you can query your production data. Try `await User.findOne()`.
 
 
-## View Logs
+### View Logs
 
 
 To view logs, the simplest way is to run:
@@ -298,9 +298,3 @@ $ heroku logs -t
 Which will also tail it for you in real-time. In addition, you can add a log indexing service addon from the Elements marketplace (for example, _Coralogix_ has a seamless integration and a free tier -- again, no affiliation).
 
 When you add a log indexing service in _Heroku_ you need to do nothing more. It integrates with _Heroku_'s Logplex, and after a few minutes your logs are there!.
-
-
-
-
- 
-
