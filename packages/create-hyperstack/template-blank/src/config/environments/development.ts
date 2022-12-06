@@ -16,6 +16,10 @@ export default async () => ({
     indexCatchAll: true,
     sendValidationErrors: true,
     serveStatic: true,
+    bearer: {
+      header: 'x-axccess-token',
+      query: 'access_token',
+    },
   },
   database: {
     // you can use sqlite for swift development, but recommended to use a real postgres

@@ -63,6 +63,10 @@ export default async () => ({
     gzip: true,
     indexCatchAll: true,
     serveStatic: true,
+    bearer: {
+      header: 'x-axccess-token',
+      query: 'access_token',
+    },
 
     // in production we're being paranoid by default. We don't give out hints to anyone. turn on if you think otherwise.
     sendValidationErrors: false,
