@@ -9,6 +9,10 @@ export default async () => ({
     gzip: true,
     indexCatchAll: true,
     serveStatic: true,
+    bearer: {
+      header: 'x-axccess-token',
+      query: 'access_token',
+    },
   },
   database: {
     uri: 'postgres://localhost:5432/tie_test',
