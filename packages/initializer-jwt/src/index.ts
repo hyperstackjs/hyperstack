@@ -26,12 +26,13 @@ export default (
     if (!jwtSecretOrPublicKey) {
       throw new Error('No JWT secret is set in configuration')
     }
+    const bearer = config.controllers!.bearer || undefined
 
     const { MustAuthWithJWT, MustAuthRouteWithJWT, signJWT, verifyJWT } =
       authWithJWT({
         secret: jwtSecretOrPublicKey,
         loader,
-        bearer: undefined,
+        bearer,
         jwtOptions: {
           expiresIn: config.controllers!.jwtExpiry || '14d',
           algorithm: config.controllers!.jwtAlgorithm || 'HS512',

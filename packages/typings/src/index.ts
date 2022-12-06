@@ -149,6 +149,10 @@ export interface Config {
     helmet?: boolean | any
     json?: boolean | any
     urlencoded?: boolean | any
+    bearer?: {
+      header: string
+      query: string
+    }
   }
   mailers?: MailerSettings
   workers?: {
