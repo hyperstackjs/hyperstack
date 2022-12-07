@@ -64,7 +64,7 @@ export default async () => ({
     indexCatchAll: true,
     serveStatic: true,
     bearer: {
-      header: 'x-axccess-token',
+      header: 'x-access-token',
       query: 'access_token',
     },
 
