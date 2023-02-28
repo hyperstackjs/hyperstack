@@ -66,7 +66,7 @@ export const getControllerConfig = (context: Context) => {
   const appRoot = store.app!.root
   const logger = store.logger
   const middleware = store.logging!.middleware
-  const initializers = store.initializers
+  const initializers = store.initializers?.initializers
   const controllerPath = path.join(appRoot, 'app', 'controllers')
 
   const {
