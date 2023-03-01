@@ -12,15 +12,12 @@ Object {
   "helmet": undefined,
   "indexCatchAll": true,
   "initializers": Object {
-    "initializers": Object {
-      "afterControllers": Array [
-        [Function],
-      ],
-      "beforeControllers": Array [
-        [Function],
-      ],
-    },
-    "props": Object {},
+    "afterControllers": Array [
+      [Function],
+    ],
+    "beforeControllers": Array [
+      [Function],
+    ],
   },
   "json": undefined,
   "logging": Object {
@@ -45,15 +42,12 @@ Object {
   "helmet": undefined,
   "indexCatchAll": undefined,
   "initializers": Object {
-    "initializers": Object {
-      "afterControllers": Array [
-        [Function],
-      ],
-      "beforeControllers": Array [
-        [Function],
-      ],
-    },
-    "props": Object {},
+    "afterControllers": Array [
+      [Function],
+    ],
+    "beforeControllers": Array [
+      [Function],
+    ],
   },
   "json": undefined,
   "logging": Object {
@@ -120,6 +114,7 @@ Array [
   "options",
   "patch",
   "post",
+  "pri",
   "propfind",
   "proppatch",
   "purge",

@@ -19,16 +19,14 @@ describe('controllers', () => {
 
       const cfg = getControllerConfig(context)
       expect(cfg.logging).toBeTruthy()
-      expect(
-        cfg.initializers?.initializers.beforeControllers!.length
-      ).toBeGreaterThan(0)
-      expect(
-        cfg.initializers?.initializers.afterControllers!.length
-      ).toBeGreaterThan(0)
+      expect(cfg.initializers?.beforeControllers!.length).toBeGreaterThan(0)
+      expect(cfg.initializers?.afterControllers!.length).toBeGreaterThan(0)
 
       cfg.logging.logger = 'test-was-ok'
       if (cfg.staticFolder) {
-        cfg.staticFolder = cfg.staticFolder.toString().replace(/^.*hyperstack/, '')
+        cfg.staticFolder = cfg.staticFolder
+          .toString()
+          .replace(/^.*hyperstack/, '')
       }
 
       expect(cfg).toMatchSnapshot(`controllers-snap-${env}`)
