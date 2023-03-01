@@ -1,6 +1,6 @@
 {
   "name": "create-hyperstack",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "author": "Dotan Nahum <dotan@rng0.io>",
   "license": "MIT",
   "main": "index.js",
