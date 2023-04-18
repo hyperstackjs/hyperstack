@@ -19,16 +19,8 @@ If you agree with that direction you'll get these for free:
 ## Example model
 
 ```ts
-import {
-  HyperModel,
-  Schema
-} from 'hyperstack'
-const {
-  AllowNull,
-  Column,
-  DataType,
-  Table,
-} = Schema
+import { HyperModel, Schema } from 'hyperstack'
+const { AllowNull, Column, DataType, Table } = Schema
 
 @Table
 class Article extends HyperModel<Partial<Article>> {
@@ -131,6 +123,8 @@ describe('models', () => {
   })
 })
 ```
+
+In order to load a model into a test file, you should use `appContext` (the same way as `Article` model is being loaded in the example above) instead importing its module directly. In this way you are making sure that your model has passed through the initialization phase on application startup.
 
 Use snapshots freely, and the rest is taken care of for you by _Hyperstack_ (setting up database, cleaning up, etc.).
 
