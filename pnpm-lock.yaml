@@ -119,65 +119,6 @@ importers:
       ts-node-dev: 1.1.8
       tsc-alias: 1.6.9
 
-  examples/tiny-url:
-    specifiers:
-      '@hyperstackjs/initializer-jwt': 1.0.29
-      '@hyperstackjs/testing': 1.0.29
-      '@types/jest': ^28.1.5
-      '@types/lodash': ^4.14.182
-      '@types/node': ^17.0.38
-      '@types/validator': ^13.7.2
-      concurrently: ^7.2.1
-      enquirer: ^2.3.6
-      hyperstack: 1.0.29
-      jest: ^28.1.1
-      jest-extended: ^3.0.1
-      lodash: ^4.17.21
-      mkdirp: ^1.0.4
-      node-notifier: 10.0.1
-      rimraf: ^3.0.2
-      sqlite3: ^5.0.8
-      stylomatic: 0.4.5
-      time-require: ^0.1.2
-      ts-jest: ^28.0.4
-      ts-node: ^10.8.1
-      ts-node-dev: ^2.0.0
-      tsc-alias: ^1.6.9
-      tsconfig-paths: ^4.0.0
-      tsup: ^6.1.0
-      typescript: ^4.7.4
-      typescript-cp: ^0.1.5
-      zod: ^3.17.3
-    dependencies:
-      '@hyperstackjs/initializer-jwt': link:../../packages/initializer-jwt
-      hyperstack: link:../../packages/hyperstack
-      lodash: 4.17.21
-      sqlite3: 5.0.8
-      ts-node: 10.8.1_x2utdhayajzrh747hktprshhby
-      tsconfig-paths: 4.0.0
-      typescript: 4.7.4
-      zod: 3.17.3
-    devDependencies:
-      '@hyperstackjs/testing': link:../../packages/testing
-      '@types/jest': 28.1.5
-      '@types/lodash': 4.14.182
-      '@types/node': 17.0.45
-      '@types/validator': 13.7.4
-      concurrently: 7.2.1
-      enquirer: 2.3.6
-      jest: 28.1.1_2unznl2n4pnytna5dybx4qmlla
-      jest-extended: 3.0.1_jest@28.1.1
-      mkdirp: 1.0.4
-      node-notifier: 10.0.1
-      rimraf: 3.0.2
-      stylomatic: 0.4.5_2unznl2n4pnytna5dybx4qmlla
-      time-require: 0.1.2
-      ts-jest: 28.0.4_zv2ltmnvcc5apkdaecods742je
-      ts-node-dev: 2.0.0_cmtl2lddv2elmbemb6ncv4z6ju
-      tsc-alias: 1.6.9
-      tsup: 6.1.0_mu66ohdiwyrigyorzidgf4bsdu
-      typescript-cp: 0.1.5_typescript@4.7.4
-
   packages/_empty:
     specifiers:
       lodash: ^4.17.21
@@ -196,14 +137,14 @@ importers:
 
   packages/create-hyperstack/template-app:
     specifiers:
-      '@hyperstackjs/initializer-jwt': 1.0.29
-      '@hyperstackjs/testing': 1.0.29
+      '@hyperstackjs/initializer-jwt': 1.0.30
+      '@hyperstackjs/testing': 1.0.30
       '@types/jest': ^28.1.5
       '@types/lodash': ^4.14.182
       '@types/node': ^17.0.38
       '@types/validator': ^13.7.2
       concurrently: ^7.2.1
-      hyperstack: 1.0.29
+      hyperstack: 1.0.30
       jest: ^28.1.1
       jest-extended: ^3.0.1
       lodash: ^4.17.21
@@ -255,14 +196,14 @@ importers:
 
   packages/create-hyperstack/template-blank:
     specifiers:
-      '@hyperstackjs/initializer-jwt': 1.0.29
-      '@hyperstackjs/testing': 1.0.29
+      '@hyperstackjs/initializer-jwt': 1.0.30
+      '@hyperstackjs/testing': 1.0.30
       '@types/jest': ^28.1.5
       '@types/lodash': ^4.14.182
       '@types/node': ^17.0.38
       '@types/validator': ^13.7.2
       concurrently: ^7.2.1
-      hyperstack: 1.0.29
+      hyperstack: 1.0.30
       jest: ^28.1.1
       jest-extended: ^3.0.1
       lodash: ^4.17.21
@@ -329,8 +270,8 @@ importers:
   packages/hypercontroller:
     specifiers:
       '@anatine/zod-openapi': ^1.3.0
-      '@hyperstackjs/hypernight': 1.0.29
-      '@hyperstackjs/typings': 1.0.29
+      '@hyperstackjs/hypernight': 1.0.30
+      '@hyperstackjs/typings': 1.0.30
       ajv: ^6.12.3
       async-express-mw: ^0.1.2
       body-parser: ^1.20.0
@@ -381,7 +322,7 @@ importers:
 
   packages/hypermodel:
     specifiers:
-      '@hyperstackjs/typings': 1.0.29
+      '@hyperstackjs/typings': 1.0.30
       debug: ^4.3.4
       glob: ^8.0.3
       lodash: ^4.17.21
@@ -449,7 +390,7 @@ importers:
 
   packages/hyperportal:
     specifiers:
-      '@hyperstackjs/typings': 1.0.29
+      '@hyperstackjs/typings': 1.0.30
       as-table: ^1.0.55
       colorette: ^2.0.16
       lodash: ^4.17.21
@@ -463,11 +404,11 @@ importers:
   packages/hyperstack:
     specifiers:
       '@faker-js/faker': ^7.1.0
-      '@hyperstackjs/gen': 1.0.29
-      '@hyperstackjs/hypercontroller': 1.0.29
-      '@hyperstackjs/hypermodel': 1.0.29
-      '@hyperstackjs/hyperportal': 1.0.29
-      '@hyperstackjs/hyperworker': 1.0.29
+      '@hyperstackjs/gen': 1.0.30
+      '@hyperstackjs/hypercontroller': 1.0.30
+      '@hyperstackjs/hypermodel': 1.0.30
+      '@hyperstackjs/hyperportal': 1.0.30
+      '@hyperstackjs/hyperworker': 1.0.30
       as-table: ^1.0.55
       colorette: ^2.0.16
       debug: ^4.3.4
@@ -507,7 +448,7 @@ importers:
 
   packages/hyperworker:
     specifiers:
-      '@hyperstackjs/typings': 1.0.29
+      '@hyperstackjs/typings': 1.0.30
       bullmq: ^1.85.3
       debug: ^4.3.4
       ejs: ^3.1.8
@@ -536,10 +477,10 @@ importers:
 
   packages/initializer-jwt:
     specifiers:
-      '@hyperstackjs/hypercontroller': 1.0.29
-      '@hyperstackjs/typings': 1.0.29
+      '@hyperstackjs/hypercontroller': 1.0.30
+      '@hyperstackjs/typings': 1.0.30
       debug: ^4.3.4
-      hyperstack: 1.0.29
+      hyperstack: 1.0.30
     dependencies:
       '@hyperstackjs/hypercontroller': link:../hypercontroller
       '@hyperstackjs/typings': link:../typings
@@ -549,7 +490,7 @@ importers:
   packages/testing:
     specifiers:
       debug: ^4.3.4
-      hyperstack: 1.0.29
+      hyperstack: 1.0.30
       lodash: ^4.17.21
       supertest: ^6.2.3
       testcontainers: ^8.10.1
@@ -10901,7 +10842,7 @@ packages:
     dependencies:
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
-      jest: 28.1.1_@types+node@12.20.52
+      jest: 28.1.1_ts-node@10.8.1
       jest-util: 28.1.1
       json5: 2.2.1
       lodash.memoize: 4.1.2
