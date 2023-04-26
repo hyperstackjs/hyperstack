@@ -21,6 +21,7 @@ const { MustAuthWithJWT } = authWithJWT({
   loader: async (payload: any) => ({
     user: { name: 'joe', email: payload.email },
   }),
+  authCookieName: 'HS_AUTH',
 })
 
 @MustAuthWithJWT
@@ -34,7 +35,7 @@ class Api {
 
 const app = createServer({
   controllers: [Api],
-  opts: { logging: { logger } },
+  opts: { logging: { logger }, cookieSecret: 'evil-supply' },
 })
 describe('hypercontroller/jwt', () => {
   it('passes auth', async () => {
