@@ -14,7 +14,7 @@ const forceHS512Verify = (jwtOptions: any) =>
     : { algorithms: ['HS512'] }
 
 // decorator creator
-const createAuth = (verify: any, { loader, bearer }: any) => {
+const createAuth = (verify: any, { loader, bearer, authCookieName }: any) => {
   const permit = new Bearer(
     bearer || {
       query: 'access_token',
@@ -22,7 +22,7 @@ const createAuth = (verify: any, { loader, bearer }: any) => {
   )
 
   return async (req: Request) => {
-    const token = permit.check(req)
+    const token = permit.check(req) || req.cookies[authCookieName]
     if (!token) {
       throw new HttpResponseUnauthorized('no token')
     }
@@ -59,11 +59,13 @@ const authWithJWT = ({
   jwtOptions,
   loader,
   bearer,
+  authCookieName,
 }: {
   secret: string
   loader: any
   jwtOptions?: any
   bearer?: any
+  authCookieName: string
 }) => {
   if (!secret) {
     throw new Error('no JWT secret set')
@@ -87,8 +89,16 @@ const authWithJWT = ({
     })
 
   return {
-    MustAuthWithJWT: buildAuth(verifyJWT, ClassMiddleware, { loader, bearer }),
-    MustAuthRouteWithJWT: buildAuth(verifyJWT, Middleware, { loader, bearer }),
+    MustAuthWithJWT: buildAuth(verifyJWT, ClassMiddleware, {
+      loader,
+      bearer,
+      authCookieName,
+    }),
+    MustAuthRouteWithJWT: buildAuth(verifyJWT, Middleware, {
+      loader,
+      bearer,
+      authCookieName,
+    }),
     signJWT,
     verifyJWT,
   }

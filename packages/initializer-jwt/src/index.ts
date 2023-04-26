@@ -6,6 +6,8 @@ import createDebug from 'debug'
 import type { Request } from '@hyperstackjs/hypercontroller'
 const debug = createDebug('hyperstack:init-jwt')
 
+const DEFAULT_AUTH_COOKIE_NAME = 'HS_AUTH'
+
 export interface JWTProps {
   MustAuthWithJWT: any
   MustAuthRouteWithJWT: any
@@ -37,6 +39,8 @@ export default (
           expiresIn: config.controllers!.jwtExpiry || '14d',
           algorithm: config.controllers!.jwtAlgorithm || 'HS512',
         },
+        authCookieName:
+          config.controllers!.authCookieName || DEFAULT_AUTH_COOKIE_NAME,
       })
 
     return {
