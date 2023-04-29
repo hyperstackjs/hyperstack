@@ -21,7 +21,7 @@ const { MustAuthWithJWT } = authWithJWT({
   loader: async (payload: any) => ({
     user: { name: 'joe', email: payload.email },
   }),
-  authCookieName: 'HS_AUTH',
+  authCookieName: 'token',
 })
 
 @MustAuthWithJWT
@@ -47,6 +47,15 @@ describe('hypercontroller/jwt', () => {
         .set({ Authorization: `Bearer ${key}` })
     )
   })
+  it('process auth with cookie', async () => {
+    const key = signJWT({ email: 'joe@ericsson.com' })
+    await expectWithSnapshot(
+      200,
+      request(app)
+        .get('/api/foobar')
+        .set('Cookie', [`token=${key}`])
+    )
+  })
   it('fails - JWT should only accept HS512', async () => {
     const key = sign({ email: 'joe@ericsson.com' }, 'testing-secret', {
       expiresIn: '1h',
@@ -62,6 +71,10 @@ describe('hypercontroller/jwt', () => {
     await expectWithSnapshot(
       401,
       request(app).get('/api/foobar').set({ Authorization: 'Bearer bad-token' })
+    )
+    await expectWithSnapshot(
+      401,
+      request(app).get('/api/foobar').set('Cookie', [`token=123`])
     )
     await expectWithSnapshot(401, request(app).get('/api/foobar'))
   })

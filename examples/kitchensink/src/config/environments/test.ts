@@ -14,6 +14,7 @@ export default async () => ({
     indexCatchAll: true,
     serveStatic: true,
     sendValidationErrors: true,
+    authCookieName: 'token',
   },
   database: {
     uri: `${process.env.POSTGRES_URL || 'postgres://localhost:5432/tie_test'}`,
@@ -23,7 +24,7 @@ export default async () => ({
     synchronize: true, // this is important for the models
     truncate: true,
     migrate: false, // this is important for e2e testing. there's a migration with no model
-    logging: false, // eslint-disable-line no-console
+    logging: false,
   },
   mailers: {
     send: true,
