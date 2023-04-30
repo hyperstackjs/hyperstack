@@ -35,7 +35,7 @@ class Api {
 
 const app = createServer({
   controllers: [Api],
-  opts: { logging: { logger }, cookieSecret: 'evil-supply' },
+  opts: { logging: { logger }, cookieSecret: 'auth-cookie-secret' },
 })
 describe('hypercontroller/jwt', () => {
   it('passes auth', async () => {
