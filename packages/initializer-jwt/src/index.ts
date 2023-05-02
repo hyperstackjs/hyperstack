@@ -19,7 +19,7 @@ const key = 'jwt'
 export const getProps = () => context.initializerProps<JWTProps>(key)
 
 export const resolveAuthCookieName = (
-  cookieNameConfig: string | null | boolean
+  cookieNameConfig?: string | boolean
 ): string | null => {
   if (typeof cookieNameConfig == 'boolean' && cookieNameConfig) {
     return DEFAULT_AUTH_COOKIE_NAME

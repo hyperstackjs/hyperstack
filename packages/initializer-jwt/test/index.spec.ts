@@ -22,7 +22,7 @@ describe('resolveAuthCookieName', () => {
   })
 
   it('should return null when no name sent (cookie auth is off)', () => {
-    const actualCookieName = resolveAuthCookieName(null)
+    const actualCookieName = resolveAuthCookieName(undefined)
 
     expect(actualCookieName).toEqual(null)
   })

@@ -168,7 +168,7 @@ controllers: {
   gzip: true,
   indexCatchAll: true, // serve from public/index.html
   serveStatic: true, // serve static content from public/
-  authCookieName: 'token', // specify cookie (should be http only cookie) name containes the JWT of the user
+  authCookieName: 'auth-cookie-name' | true | false, // set to true to enable cookie auth with default cookie name (HS_AUTH), specify desired cookie name or set to false to turn off cookie auth
   // helmet?: bool | {..}
   // json?: bool | {..}
   // urlencoded?: bool | {..}
