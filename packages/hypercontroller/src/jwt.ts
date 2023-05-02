@@ -22,7 +22,9 @@ const createAuth = (verify: any, { loader, bearer, authCookieName }: any) => {
   )
 
   return async (req: Request) => {
-    const token = permit.check(req) || req.cookies[authCookieName]
+    const token = authCookieName
+      ? req.cookies[authCookieName]
+      : permit.check(req)
     if (!token) {
       throw new HttpResponseUnauthorized('no token')
     }
@@ -65,7 +67,7 @@ const authWithJWT = ({
   loader: any
   jwtOptions?: any
   bearer?: any
-  authCookieName: string
+  authCookieName: string | null | boolean
 }) => {
   if (!secret) {
     throw new Error('no JWT secret set')

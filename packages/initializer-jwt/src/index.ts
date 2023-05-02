@@ -6,7 +6,7 @@ import createDebug from 'debug'
 import type { Request } from '@hyperstackjs/hypercontroller'
 const debug = createDebug('hyperstack:init-jwt')
 
-const DEFAULT_AUTH_COOKIE_NAME = 'HS_AUTH'
+export const DEFAULT_AUTH_COOKIE_NAME = 'HS_AUTH'
 
 export interface JWTProps {
   MustAuthWithJWT: any
@@ -17,6 +17,18 @@ export interface JWTProps {
 }
 const key = 'jwt'
 export const getProps = () => context.initializerProps<JWTProps>(key)
+
+export const resolveAuthCookieName = (
+  cookieNameConfig: string | null | boolean
+): string | null => {
+  if (typeof cookieNameConfig == 'boolean' && cookieNameConfig) {
+    return DEFAULT_AUTH_COOKIE_NAME
+  }
+  if (typeof cookieNameConfig == 'string' && cookieNameConfig.length > 0) {
+    return cookieNameConfig
+  }
+  return null
+}
 
 export default (
     createLoader: (context: Context) => (payload: any) => Promise<any | null>
@@ -29,19 +41,34 @@ export default (
       throw new Error('No JWT secret is set in configuration')
     }
     const bearer = config.controllers!.bearer || undefined
+    const resolvedAuthCookieName = resolveAuthCookieName(
+      config.controllers!.authCookieName
+    )
+
+    let finalParams
+    const baseParams = {
+      secret: jwtSecretOrPublicKey,
+      loader,
+      bearer,
+      jwtOptions: {
+        expiresIn: config.controllers!.jwtExpiry || '14d',
+        algorithm: config.controllers!.jwtAlgorithm || 'HS512',
+      },
+    }
+
+    if (resolvedAuthCookieName) {
+      finalParams = {
+        ...baseParams,
+        authCookieName: resolvedAuthCookieName,
+      }
+    } else {
+      finalParams = {
+        ...baseParams,
+      }
+    }
 
     const { MustAuthWithJWT, MustAuthRouteWithJWT, signJWT, verifyJWT } =
-      authWithJWT({
-        secret: jwtSecretOrPublicKey,
-        loader,
-        bearer,
-        jwtOptions: {
-          expiresIn: config.controllers!.jwtExpiry || '14d',
-          algorithm: config.controllers!.jwtAlgorithm || 'HS512',
-        },
-        authCookieName:
-          config.controllers!.authCookieName || DEFAULT_AUTH_COOKIE_NAME,
-      })
+      authWithJWT(finalParams)
 
     return {
       provideProps() {

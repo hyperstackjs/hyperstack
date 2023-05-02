@@ -140,7 +140,7 @@ export interface Config {
     jwtSecret?: string
     jwtExpiry?: string
     jwtAlgorithm?: string
-    authCookieName?: string
+    authCookieName?: string | null | boolean
     baseUrl?: string
     serveStatic?: boolean
     indexCatchAll?: boolean
