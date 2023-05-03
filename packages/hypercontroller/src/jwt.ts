@@ -67,7 +67,7 @@ const authWithJWT = ({
   loader: any
   jwtOptions?: any
   bearer?: any
-  authCookieName?: string | boolean
+  authCookieName?: string | null
 }) => {
   if (!secret) {
     throw new Error('no JWT secret set')
