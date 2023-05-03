@@ -21,13 +21,20 @@ export const getProps = () => context.initializerProps<JWTProps>(key)
 export const resolveAuthCookieName = (
   cookieNameConfig?: string | boolean
 ): string | null => {
-  if (typeof cookieNameConfig == 'boolean' && cookieNameConfig) {
+  if (!cookieNameConfig) {
+    return null
+  }
+
+  if (cookieNameConfig === true) {
     return DEFAULT_AUTH_COOKIE_NAME
-  }
-  if (typeof cookieNameConfig == 'string' && cookieNameConfig.length > 0) {
+  } else if (
+    typeof cookieNameConfig == 'string' &&
+    cookieNameConfig.length > 0
+  ) {
     return cookieNameConfig
+  } else {
+    return null
   }
-  return null
 }
 
 export default (
