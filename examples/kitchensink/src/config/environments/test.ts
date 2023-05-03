@@ -14,7 +14,6 @@ export default async () => ({
     indexCatchAll: true,
     serveStatic: true,
     sendValidationErrors: true,
-    authCookieName: 'token',
   },
   database: {
     uri: `${process.env.POSTGRES_URL || 'postgres://localhost:5432/tie_test'}`,
