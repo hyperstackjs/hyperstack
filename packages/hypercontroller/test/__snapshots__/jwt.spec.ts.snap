@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hypercontroller/jwt fails - JWT should only accept HS512 1`] = `
+exports[`hypercontroller/jwt bearer auth fails - JWT should only accept HS512 1`] = `
 Object {
   "body": Object {},
   "headers": Object {
@@ -28,7 +28,7 @@ Object {
 }
 `;
 
-exports[`hypercontroller/jwt fails auth 1`] = `
+exports[`hypercontroller/jwt bearer auth fails auth 1`] = `
 Object {
   "body": Object {},
   "headers": Object {
@@ -56,7 +56,7 @@ Object {
 }
 `;
 
-exports[`hypercontroller/jwt fails auth 2`] = `
+exports[`hypercontroller/jwt bearer auth fails auth 2`] = `
 Object {
   "body": Object {},
   "headers": Object {
@@ -84,7 +84,151 @@ Object {
 }
 `;
 
-exports[`hypercontroller/jwt passes auth 1`] = `
+exports[`hypercontroller/jwt bearer auth passes auth 1`] = `
+Object {
+  "body": Object {
+    "its": "alright",
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "17",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 200,
+}
+`;
+
+exports[`hypercontroller/jwt cookie authentication authCookieName contains string value should not pass auth - invaild jwt 1`] = `
+Object {
+  "body": Object {},
+  "headers": Object {
+    "connection": "close",
+    "content-length": "9",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "text/html; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "www-authenticate": "",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 401,
+}
+`;
+
+exports[`hypercontroller/jwt cookie authentication authCookieName contains string value should pass auth via auth cookie 1`] = `
+Object {
+  "body": Object {
+    "its": "alright",
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "17",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 200,
+}
+`;
+
+exports[`hypercontroller/jwt cookie authentication authCookieName is false - no cookie auth should pass auth via bearer token 1`] = `
+Object {
+  "body": Object {
+    "its": "alright",
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "17",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 200,
+}
+`;
+
+exports[`hypercontroller/jwt cookie authentication authCookieName is not set - no cookie auth should pass auth via bearer token 1`] = `
+Object {
+  "body": Object {
+    "its": "alright",
+  },
+  "headers": Object {
+    "connection": "close",
+    "content-length": "17",
+    "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "content-type": "application/json; charset=utf-8",
+    "cross-origin-embedder-policy": "require-corp",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "expect-ct": "max-age=0",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+  },
+  "status": 200,
+}
+`;
+
+exports[`hypercontroller/jwt cookie authentication authCookieName is true - user uses default cookie name should pass auth via auth cookie 1`] = `
 Object {
   "body": Object {
     "its": "alright",

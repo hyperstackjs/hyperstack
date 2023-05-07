@@ -23,7 +23,7 @@ export default async () => ({
     synchronize: true, // this is important for the models
     truncate: true,
     migrate: false, // this is important for e2e testing. there's a migration with no model
-    logging: false, // eslint-disable-line no-console
+    logging: false,
   },
   mailers: {
     send: true,
