@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev bin/hyperstack.ts run",
+    "dev": "ts-node-dev bin/hyperstack.ts start",
     "build:watch": "concurrently -n typescript,aliases 'tsc -w' 'tsc-alias -w'",
     "build": "rimraf dist && tsc && tsc-alias && tscp",
     "test": "jest --runInBand --logHeapUsage",
@@ -13,9 +13,9 @@
     "@hyperstackjs/initializer-jwt": "*",
     "@sentry/node": "^6.19.7",
     "@sentry/tracing": "^6.19.7",
+    "hyperstack": "*",
     "jsonexport": "^3.2.0",
     "nodemailer": "^6.7.3",
-    "hyperstack": "*",
     "pg": "^8.7.3",
     "pg-native": "^3.0.0",
     "tsconfig-paths": "^4.0.0",
@@ -29,8 +29,8 @@
     "jest-extended": "^3.0.1",
     "stylomatic": "0.4.5",
     "time-require": "^0.1.2",
-    "ts-node": "^10.8.1",
-    "ts-node-dev": "^1.1.8",
-    "tsc-alias": "^1.6.9"
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.4"
   }
 }
