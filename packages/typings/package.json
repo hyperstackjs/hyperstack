@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/typings",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "author": "Dotan Nahum <dotan@rng0.io>",
   "license": "MIT",
   "main": "dist/index.js",

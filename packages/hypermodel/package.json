@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/hypermodel",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "author": "Dotan Nahum <dotan@rng0.io>",
   "license": "MIT",
   "main": "dist/index.js",
@@ -27,7 +27,7 @@
     "umzug": "^3.1.1"
   },
   "devDependencies": {
-    "@hyperstackjs/typings": "1.0.30",
+    "@hyperstackjs/typings": "1.0.31",
     "sqlite3": "^5.0.8"
   }
 }

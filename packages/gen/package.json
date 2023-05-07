@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/gen",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "private": false,
   "license": "MIT",
   "main": "dist/index.js",
