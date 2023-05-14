@@ -52,7 +52,7 @@ Otherwise, running Typescript in production (this happens via `ts-node`) means t
 
 ## Database Configuration
 
-By default your app is using `sqlite` and automatic database structre sync inferred from your models. This set up is cool, fast, and sophisticated because it's automatic and has zero friction.
+By default your app is using `sqlite` and automatic database structure sync inferred from your models. This set up is cool, fast, and sophisticated because it's automatic and has zero friction.
 
 To prepare for real-life production use cases, we recommended to move to `postgres` and explicit migrations when you can.
 
