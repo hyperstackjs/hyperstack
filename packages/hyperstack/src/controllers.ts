@@ -18,6 +18,8 @@ const createApp = ({
   gzip,
   cookieSecret,
   sendValidationErrors,
+  urlencoded,
+  json
 }: { controllers: any; initializers: any } & Partial<ServerOptions>) => {
   return createServer({
     controllers,
@@ -29,6 +31,8 @@ const createApp = ({
       gzip,
       cookieSecret,
       sendValidationErrors,
+      urlencoded,
+      json,
       beforeMiddleware: (preapp: any) => {
         if (initializers && initializers.beforeMiddleware) {
           initializers.beforeMiddleware.forEach((init: (app: any) => void) =>
