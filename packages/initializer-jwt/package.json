@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/initializer-jwt",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "author": "Dotan Nahum <dotan@rng0.io>",
   "license": "MIT",
   "main": "dist/index.js",
@@ -18,10 +18,10 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@hyperstackjs/hypercontroller": "1.0.31",
-    "@hyperstackjs/typings": "1.0.31",
+    "@hyperstackjs/hypercontroller": "1.0.32",
+    "@hyperstackjs/typings": "1.0.32",
     "debug": "^4.3.4",
-    "hyperstack": "1.0.31"
+    "hyperstack": "1.0.32"
   },
   "devDependencies": {}
 }
