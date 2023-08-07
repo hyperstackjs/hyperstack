@@ -1,4 +1,4 @@
-import { Controller, Get, Post, err, ok, requires, unauthorized } from 'hyperstack'
+import { Controller, Post, err, ok, requires, unauthorized } from 'hyperstack'
 import type { Request, Response } from 'hyperstack'
 import { z } from 'zod'
 import { User } from '../models/user'
@@ -41,7 +41,7 @@ export default class Auth {
       throw unauthorized('incorrect username or password')
     }
 
-    return ok({ token: user.createAuthenticationToken() })
+    return ok({ user: user.toJSON(), token: user.createAuthenticationToken() })
   }
 
   @Post('register')
@@ -58,14 +58,12 @@ export default class Auth {
     // send email
     await AuthMailer.sendWelcome(user).deliverLater()
 
-    return ok({ token: user.createAuthenticationToken() })
+    return ok({ user: user.toJSON(), token: user.createAuthenticationToken() })
   }
 
-  @Get('verify')
+  @Post('verify')
   async verify(req: Request) {
-    const { verifyToken: emailVerificationToken } = requireVerifyToken(
-      req.query
-    )
+    const { verifyToken: emailVerificationToken } = requireVerifyToken(req.body)
     if (!emailVerificationToken) {
       throw err('missing verify token')
     }
