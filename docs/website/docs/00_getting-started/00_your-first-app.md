@@ -238,7 +238,7 @@ And perform requests (I'm using [xh](https://github.com/ducaale/xh) but you can 
 **List:**
 
 ```
-$ xh -j -b localhost:5150/articles
+$ xh -b localhost:5150/articles
 {
     "articles": []
 }
@@ -246,7 +246,7 @@ $ xh -j -b localhost:5150/articles
 **Create:**
 
 ```
-$ xh -j -b localhost:5150/articles title="hello hyperstack" body="EVH rocks"
+$ xh -b localhost:5150/articles title="hello hyperstack" body="EVH rocks"
 {
     "article": {
         "title": "hello hyperstack",
@@ -258,7 +258,7 @@ $ xh -j -b localhost:5150/articles title="hello hyperstack" body="EVH rocks"
 Take a look at the list again:
 
 ```
-$ xh -j -b localhost:5150/articles
+$ xh -b localhost:5150/articles
 {
     "articles": [
         {
@@ -296,7 +296,7 @@ Edit `src/app/models/article.ts` and add `id` to the `toJSON()` serialization fu
 And now we've got an ID to use in our updates:
 
 ```
-$ xh -j -b localhost:5150/articles
+$ xh -b localhost:5150/articles
 {
     "articles": [
         {
@@ -311,7 +311,7 @@ $ xh -j -b localhost:5150/articles
 Issue an update request:
 
 ```
-$ xh -j -b localhost:5150/articles/2 title="hello hyperstack" body="Eddie rocks"
+$ xh -b localhost:5150/articles/2 title="hello hyperstack" body="Eddie rocks"
 {
     "article": {
         "id": 2,
@@ -324,7 +324,7 @@ $ xh -j -b localhost:5150/articles/2 title="hello hyperstack" body="Eddie rocks"
 And just to double check, let's fetch articles again:
 
 ```
-$ xh -j -b localhost:5150/articles
+$ xh -b localhost:5150/articles
 {
     "articles": [
         {
@@ -419,7 +419,7 @@ And let's add a `@Delete` action at the bottom:
 And make the `DELETE` request:
 
 ```
-$ xh -j -b DELETE localhost:5150/articles/2
+$ xh -b DELETE localhost:5150/articles/2
 {
     "deleted": true
 }
@@ -428,7 +428,7 @@ $ xh -j -b DELETE localhost:5150/articles/2
 Boom, it's gone:
 
 ```
-$ xh -j -b localhost:5150/articles
+$ xh -b localhost:5150/articles
 {
     "articles": []
 }

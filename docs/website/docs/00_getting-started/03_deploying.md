@@ -213,7 +213,7 @@ Logging in...
 **You're done!**. Your app should now serve requests and save data to Postgres:
 
 ```bash
-$ xh -j -b https://dry-butterfly-xxxx.fly.dev/articles title="hello hyperstack" body="EVH rocks"
+$ xh -b https://dry-butterfly-xxxx.fly.dev/articles title="hello hyperstack" body="EVH rocks"
 {
     "article": {
         "id": 1,
