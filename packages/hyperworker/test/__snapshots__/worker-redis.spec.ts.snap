@@ -16,6 +16,7 @@ exports[`worker should build workers 2`] = `
   "delayed": 0,
   "failed": 0,
   "paused": 0,
+  "prioritized": 0,
   "waiting": 0,
   "waiting-children": 0,
 }

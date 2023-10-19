@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import fs from 'fs'
-import glob from 'glob'
+import { globSync } from 'glob'
 import {
   bold,
   cyanBright,
@@ -39,10 +39,10 @@ export const requireModule = (f: string) => {
   return mod.default || mod
 }
 export const load = (patt: string) =>
-  L.sortBy(glob.sync(patt), L.identity).map(requireModule)
+  L.sortBy(globSync(patt), L.identity).map(requireModule)
 
 export const loadMap = (patt: string) =>
-  L.sortBy(glob.sync(patt), L.identity).reduce((acc: any, f: string) => {
+  L.sortBy(globSync(patt), L.identity).reduce((acc: any, f: string) => {
     acc[f] = requireModule(f)
     return acc
   }, {})

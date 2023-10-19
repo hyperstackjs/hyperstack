@@ -19,7 +19,7 @@
   "peerDependencies": {},
   "dependencies": {
     "debug": "^4.3.4",
-    "glob": "^8.0.3",
+    "glob": "^10.3.10",
     "lodash": "^4.17.21",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.33.0",

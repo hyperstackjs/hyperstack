@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import glob from 'glob'
+import { globSync } from 'glob'
 import L from 'lodash'
 import createDebug from 'debug'
 import { HyperWorker } from './worker'
@@ -16,7 +16,7 @@ import { BullmqBackend } from './backend'
 
 const debug = createDebug('@hyperstackjs/hyperworker')
 const load = (patt: string) =>
-  glob.sync(patt).map((f) => {
+  globSync(patt).map((f) => {
     let mod = null
     try {
       mod = require(f)

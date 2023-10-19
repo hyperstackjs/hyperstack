@@ -1,7 +1,7 @@
 import path from 'path'
-import glob from 'glob'
+import { globSync } from 'glob'
 const load = (patt: string, cwd = process.cwd()) =>
-  glob.sync(path.join(cwd, patt)).map((f) => {
+  globSync(path.join(cwd, patt)).map((f) => {
     let mod = null
     try {
       mod = require(f)

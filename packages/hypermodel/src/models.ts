@@ -1,9 +1,9 @@
-import glob from 'glob'
+import { globSync } from 'glob'
 import { Sequelize } from 'sequelize-typescript'
 import L from 'lodash'
 import type { ModelsOpts } from './types'
 const load = (patt: string) =>
-  glob.sync(patt).map((f) => {
+  globSync(patt).map((f) => {
     let mod = null
     try {
       mod = require(f)

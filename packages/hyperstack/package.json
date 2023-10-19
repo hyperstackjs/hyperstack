@@ -27,7 +27,7 @@
     "colorette": "^2.0.16",
     "debug": "^4.3.4",
     "express-pino-logger": "^7.0.0",
-    "glob": "^8.0.3",
+    "glob": "^10.3.10",
     "lodash": "^4.17.21",
     "pino": "^8.0.0",
     "pino-pretty": "^8.0.0",

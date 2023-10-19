@@ -28,7 +28,7 @@
     "debug": "^4.3.4",
     "express": "^4.18.1",
     "express-pino-logger": "^7.0.0",
-    "glob": "^8.0.3",
+    "glob": "^10.3.10",
     "helmet": "^5.1.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
