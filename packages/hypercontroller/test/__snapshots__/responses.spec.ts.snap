@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hypercontroller/responses no req res 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "its": "alright",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "17",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -30,11 +30,11 @@ Object {
 `;
 
 exports[`hypercontroller/responses raw object 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "hello": "ok",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "14",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -59,11 +59,11 @@ Object {
 `;
 
 exports[`hypercontroller/responses requests 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "its": "alright",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "17",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -88,14 +88,14 @@ Object {
 `;
 
 exports[`hypercontroller/responses validation error 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Object {
-      "errors": Array [],
+    "validationErrors": {
+      "errors": [],
     },
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "55",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -120,11 +120,11 @@ Object {
 `;
 
 exports[`hypercontroller/responses wraps async erors 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "bad request",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "23",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",

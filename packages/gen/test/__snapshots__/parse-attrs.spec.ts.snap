@@ -1,134 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`parseAttrs model but no attributes 1`] = `Array []`;
+exports[`parseAttrs model but no attributes 1`] = `[]`;
 
-exports[`parseAttrs model but no attributes 2`] = `Array []`;
+exports[`parseAttrs model but no attributes 2`] = `[]`;
 
-exports[`parseAttrs model but no attributes 3`] = `Array []`;
+exports[`parseAttrs model but no attributes 3`] = `[]`;
 
 exports[`parseAttrs parses 1`] = `
-Array [
-  Object {
-    "as": Object {
-      "fixture": Array [
+[
+  {
+    "as": {
+      "fixture": [
         "'string'",
       ],
-      "fixtureAlt": Array [
+      "fixtureAlt": [
         "'updated'",
       ],
-      "migration": Array [
+      "migration": [
         "t.string('title')",
       ],
-      "model": Array [
+      "model": [
         "@Column",
         "title: string",
       ],
-      "zod": Array [
+      "zod": [
         "title: z.string()",
       ],
     },
     "name": "title",
   },
-  Object {
-    "as": Object {
-      "fixture": Array [
+  {
+    "as": {
+      "fixture": [
         "'some text'",
       ],
-      "fixtureAlt": Array [
+      "fixtureAlt": [
         "'a different text'",
       ],
-      "migration": Array [
+      "migration": [
         "t.text('content')",
       ],
-      "model": Array [
+      "model": [
         "@Column(DataType.TEXT)",
         "content: string",
       ],
-      "zod": Array [
+      "zod": [
         "content: z.string()",
       ],
     },
     "name": "content",
   },
-  Object {
-    "as": Object {
-      "fixture": Array [
+  {
+    "as": {
+      "fixture": [
         "5150",
       ],
-      "fixtureAlt": Array [
+      "fixtureAlt": [
         "1337",
       ],
-      "migration": Array [
+      "migration": [
         "t.int('count')",
       ],
-      "model": Array [
+      "model": [
         "@Column",
         "count: number",
       ],
-      "zod": Array [
+      "zod": [
         "count: z.number()",
       ],
     },
     "name": "count",
   },
-  Object {
-    "as": Object {
-      "fixture": Array [
-        "{\\"hello\\": \\"world\\"}",
+  {
+    "as": {
+      "fixture": [
+        "{"hello": "world"}",
       ],
-      "fixtureAlt": Array [
-        "{\\"hello\\": \\"crewl world\\"}",
+      "fixtureAlt": [
+        "{"hello": "crewl world"}",
       ],
-      "migration": Array [
+      "migration": [
         "t.json('settings')",
       ],
-      "model": Array [
+      "model": [
         "@Column(DataType.JSON)",
         "settings: any",
       ],
-      "zod": Array [
+      "zod": [
         "settings: z.any()",
       ],
     },
     "name": "settings",
   },
-  Object {
-    "as": Object {
-      "fixture": Array [
+  {
+    "as": {
+      "fixture": [
         "new Date('1986-03-24')",
       ],
-      "fixtureAlt": Array [
+      "fixtureAlt": [
         "new Date('1981-09-08')",
       ],
-      "migration": Array [
+      "migration": [
         "t.date('createdAt')",
       ],
-      "model": Array [
+      "model": [
         "@Column",
         "createdAt: Date",
       ],
-      "zod": Array [
+      "zod": [
         "createdAt: z.date()",
       ],
     },
     "name": "createdAt",
   },
-  Object {
-    "as": Object {
-      "fixture": Array [
+  {
+    "as": {
+      "fixture": [
         "true",
       ],
-      "fixtureAlt": Array [
+      "fixtureAlt": [
         "false",
       ],
-      "migration": Array [
+      "migration": [
         "t.bool('isDeleted')",
       ],
-      "model": Array [
+      "model": [
         "@Column",
         "isDeleted: boolean",
       ],
-      "zod": Array [
+      "zod": [
         "isDeleted: z.boolean()",
       ],
     },
@@ -138,44 +138,44 @@ Array [
 `;
 
 exports[`parseAttrs parses 2`] = `
-Array [
-  Object {
-    "as": Object {
-      "fixture": Array [
+[
+  {
+    "as": {
+      "fixture": [
         "'string'",
       ],
-      "fixtureAlt": Array [
+      "fixtureAlt": [
         "'updated'",
       ],
-      "migration": Array [
+      "migration": [
         "t.string('title')",
       ],
-      "model": Array [
+      "model": [
         "@Column",
         "title: string",
       ],
-      "zod": Array [
+      "zod": [
         "title: z.string()",
       ],
     },
     "name": "title",
   },
-  Object {
-    "as": Object {
-      "fixture": Array [
+  {
+    "as": {
+      "fixture": [
         "'some text'",
       ],
-      "fixtureAlt": Array [
+      "fixtureAlt": [
         "'a different text'",
       ],
-      "migration": Array [
+      "migration": [
         "t.text('content')",
       ],
-      "model": Array [
+      "model": [
         "@Column(DataType.TEXT)",
         "content: string",
       ],
-      "zod": Array [
+      "zod": [
         "content: z.string()",
       ],
     },

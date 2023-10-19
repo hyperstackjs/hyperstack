@@ -37,6 +37,14 @@ const createSequelizeConfig = async ({
     min_pool_connection = max_pool_connection
   }
 
+  let modelList: any[] = []
+  // bun.js
+  modelList = Object.values(Object.getPrototypeOf(models))
+  if (modelList.length === 0) {
+    // node.js
+    modelList = Object.values(models)
+  }
+
   const uri = config.uri
   return {
     uri,
@@ -46,7 +54,7 @@ const createSequelizeConfig = async ({
       benchmark: isTrue(config.logging),
       native: config.native,
       ssl: config.ssl,
-      models: L.values(models), // or [Player, Team],
+      models: modelList, // or [Player, Team],
       pool: {
         max: max_pool_connection,
         min: min_pool_connection,

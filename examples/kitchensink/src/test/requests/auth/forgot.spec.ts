@@ -11,9 +11,8 @@ const serializer = redactAndExpectMatch({
   'body.token': /^eyJh.+/,
 })
 
-const serializeTokenEmails = redactAndExpectMatchInEmails(
-  /resetToken=[a-z0-9]{64}/g
-)
+const serializeTokenEmails =
+  redactAndExpectMatchInEmails(/reset\/[a-z0-9]{64}/g)
 
 const serializeUser = redactAndExpectMatch({
   pid: /.+-.+-.+-.+-.+/,

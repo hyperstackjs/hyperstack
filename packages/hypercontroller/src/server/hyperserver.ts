@@ -116,13 +116,13 @@ export class HyperServer extends Server {
     if (helmetOpts !== false) {
       const res = isDefaultSetting(helmetOpts) ? defaults.helmet : helmetOpts
       debug('helmet: %o', res)
-      this.app.use(helmet(res))
+      this.app.use(helmet(res) as any)
     }
 
     if (jsonOpts !== false) {
       const res = isDefaultSetting(jsonOpts) ? defaults.json : jsonOpts
       debug('json: %o', res)
-      this.app.use(json(res))
+      this.app.use(json(res) as any)
     }
 
     if (urlencodedOpts !== false) {
@@ -130,7 +130,7 @@ export class HyperServer extends Server {
         ? defaults.urlencoded
         : urlencodedOpts
       debug('urlencoded: %o', res)
-      this.app.use(urlencoded(res))
+      this.app.use(urlencoded(res) as any)
     }
 
     if (cookieSecret) {

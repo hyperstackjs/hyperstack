@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import type { IClassMetadata, IMethodMetadata, WrapperFunction } from './types'
 import { classMetadataKey } from './types'
 

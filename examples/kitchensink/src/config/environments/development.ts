@@ -28,7 +28,7 @@ export default async (): Promise<Config> => ({
     uri: 'postgres://localhost:5432/tie_development',
     // uri: 'sqlite::memory:',
     ssl: false,
-    native: true,
+    native: false,
     dropSchema: false,
     synchronize: true, // we're syncing schema in dev. but should do migrations for real-life
     truncate: false,

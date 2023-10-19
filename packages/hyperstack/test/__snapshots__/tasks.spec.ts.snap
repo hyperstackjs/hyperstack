@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tasks ties tasks 1`] = `
-Object {
-  "map": Object {
-    "weekly-email": Object {
+{
+  "map": {
+    "weekly-email": {
       "description": "send a weekly email.",
       "exec": [Function],
     },
@@ -13,9 +13,9 @@ Object {
 `;
 
 exports[`tasks ties tasks 2`] = `
-Object {
-  "map": Object {
-    "foo-email": Object {
+{
+  "map": {
+    "foo-email": {
       "description": "custom task",
       "exec": [Function],
     },

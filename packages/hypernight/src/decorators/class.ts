@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import type { RouterOptions } from 'express'
 import type { IClassMetadata, Controller as TController } from './types'
 import { classMetadataKey } from './types'
@@ -79,6 +80,7 @@ export function addChildControllersToClassMetadata(
     metadata.childControllers = []
   }
   let newArr: TController[]
+
   if (childControllers instanceof Array) {
     newArr = childControllers.slice()
   } else {

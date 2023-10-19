@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`controllers configures tie: controllers-snap-development 1`] = `
-Object {
+{
   "baseUrl": "http://example.com",
-  "controllers": Array [
+  "controllers": [
     [Function],
   ],
   "cookieSecret": "shazam",
@@ -11,16 +11,16 @@ Object {
   "gzip": true,
   "helmet": undefined,
   "indexCatchAll": true,
-  "initializers": Object {
-    "afterControllers": Array [
+  "initializers": {
+    "afterControllers": [
       [Function],
     ],
-    "beforeControllers": Array [
+    "beforeControllers": [
       [Function],
     ],
   },
   "json": undefined,
-  "logging": Object {
+  "logging": {
     "logger": "test-was-ok",
     "middleware": [Function],
   },
@@ -31,9 +31,9 @@ Object {
 `;
 
 exports[`controllers configures tie: controllers-snap-developmentnullish 1`] = `
-Object {
+{
   "baseUrl": "http://localhost:5150",
-  "controllers": Array [
+  "controllers": [
     [Function],
   ],
   "cookieSecret": undefined,
@@ -41,16 +41,16 @@ Object {
   "gzip": undefined,
   "helmet": undefined,
   "indexCatchAll": undefined,
-  "initializers": Object {
-    "afterControllers": Array [
+  "initializers": {
+    "afterControllers": [
       [Function],
     ],
-    "beforeControllers": Array [
+    "beforeControllers": [
       [Function],
     ],
   },
   "json": undefined,
-  "logging": Object {
+  "logging": {
     "logger": "test-was-ok",
     "middleware": [Function],
   },
@@ -61,7 +61,7 @@ Object {
 `;
 
 exports[`controllers ties 1`] = `
-Array [
+[
   "_events",
   "_eventsCount",
   "_maxListeners",

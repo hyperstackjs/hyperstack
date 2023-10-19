@@ -1,6 +1,6 @@
 export default async () => ({
   logger: {
-    level: 'info',
+    level: 'error',
     redact: {
       paths: ['res.headers["content-security-policy"]'],
     },
@@ -18,7 +18,7 @@ export default async () => ({
   database: {
     uri: `${process.env.POSTGRES_URL || 'postgres://localhost:5432/tie_test'}`,
     ssl: false,
-    native: true,
+    native: false,
     dropSchema: false,
     synchronize: true, // this is important for the models
     truncate: true,

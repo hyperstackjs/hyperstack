@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`worker should build workers 1`] = `
-Object {
+{
   "from": "no-reply@elle-postage.example.com",
-  "to": Array [
+  "to": [
     "joe@example.com",
   ],
 }
 `;
 
 exports[`worker should build workers 2`] = `
-Object {
+{
   "active": 0,
   "completed": 0,
   "delayed": 0,

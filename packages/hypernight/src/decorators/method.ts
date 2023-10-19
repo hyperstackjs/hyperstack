@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import type { HttpDecorator, IHttpRoute, IMethodMetadata } from './types'
 import { HttpVerb } from './types'
 

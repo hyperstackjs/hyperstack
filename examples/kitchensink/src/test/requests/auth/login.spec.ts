@@ -10,6 +10,7 @@ const {
 
 const serializer = redactAndExpectMatch({
   'body.token': /^eyJh.+/,
+  'body.user.pid': /.+-.+-.+-.+-.+/,
 })
 
 describe('requests', () => {

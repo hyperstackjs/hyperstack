@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`mailer should email 1`] = `
-Object {
-  "envelope": Object {
+{
+  "envelope": {
     "from": "no-reply@elle-postage.example.com",
-    "to": Array [
+    "to": [
       "juan@fangio.example.com",
     ],
   },
-  "message": "{\\"from\\":{\\"address\\":\\"no-reply@elle-postage.example.com\\",\\"name\\":\\"Elle Postage\\"},\\"to\\":[{\\"address\\":\\"juan@fangio.example.com\\",\\"name\\":\\"\\"}],\\"attachments\\":[],\\"subject\\":\\"Welcome Juan\\",\\"html\\":\\"<html>\\\\n<body>\\\\n  hello markup <b>email</b>\\\\n</body>\\\\n</html>\\\\n\\",\\"text\\":\\"Welcome Juan, you can now log in.\\\\n\\",\\"headers\\":{},\\"messageId\\":\\"msg-id\\"}",
+  "message": "{"from":{"address":"no-reply@elle-postage.example.com","name":"Elle Postage"},"to":[{"address":"juan@fangio.example.com","name":""}],"attachments":[],"subject":"Welcome Juan","html":"<html>\\n<body>\\n  hello markup <b>email</b>\\n</body>\\n</html>\\n","text":"Welcome Juan, you can now log in.\\n","headers":{},"messageId":"msg-id"}",
   "messageId": "msg-id",
-  "originalMessage": Object {
-    "attachments": Array [],
+  "originalMessage": {
+    "attachments": [],
     "from": "Elle Postage <no-reply@elle-postage.example.com>",
     "html": "<html>
 <body>

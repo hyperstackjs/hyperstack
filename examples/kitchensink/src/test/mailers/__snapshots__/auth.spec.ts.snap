@@ -9,12 +9,15 @@ Object {
     "Welcome joe, you can now log in.
   Verify your account with the link below:
 
-  http://localhost/verify?verifyToken=
+  http://localhost/verify/
 ",
-    "<html>
+    ";<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+  You can{' '}
+  <a href=\\"http://localhost:/verify/\\">
+    verify your account
+  </a>
 </body>
 
 </html>
@@ -31,10 +34,13 @@ Object {
   "originalMessage": Object {
     "attachments": Array [],
     "from": "Elle Postage <no-reply@elle-postage.example.com>",
-    "html": "<html>
+    "html": ";<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+  You can{' '}
+  <a href=\\"http://localhost:/verify/\\">
+    verify your account
+  </a>
 </body>
 
 </html>
@@ -43,7 +49,7 @@ Object {
     "text": "Welcome joe, you can now log in.
   Verify your account with the link below:
 
-  http://localhost/verify?verifyToken=
+  http://localhost/verify/
 ",
     "to": "joe@example.com",
   },
@@ -65,12 +71,15 @@ Array [
       "Welcome joe, you can now log in.
   Verify your account with the link below:
 
-  http://localhost/verify?verifyToken=
+  http://localhost/verify/
 ",
-      "<html>
+      ";<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+  You can{' '}
+  <a href=\\"http://localhost:/verify/\\">
+    verify your account
+  </a>
 </body>
 
 </html>
@@ -87,10 +96,13 @@ Array [
     "originalMessage": Object {
       "attachments": Array [],
       "from": "Elle Postage <no-reply@elle-postage.example.com>",
-      "html": "<html>
+      "html": ";<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+  You can{' '}
+  <a href=\\"http://localhost:/verify/\\">
+    verify your account
+  </a>
 </body>
 
 </html>
@@ -99,7 +111,7 @@ Array [
       "text": "Welcome joe, you can now log in.
   Verify your account with the link below:
 
-  http://localhost/verify?verifyToken=
+  http://localhost/verify/
 ",
       "to": "joe@example.com",
     },

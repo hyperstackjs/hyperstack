@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`worker: inprocess should build workers 1`] = `
-Object {
+{
   "from": "no-reply@elle-postage.example.com",
-  "to": Array [
+  "to": [
     "joe@example.com",
   ],
 }

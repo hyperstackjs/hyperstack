@@ -13,7 +13,13 @@ export const expectRequestWithSnapshot = async (
   expect({
     status: res.statusCode,
     body: res.body,
-    headers: L.omit(res.headers, 'date', 'etag', 'x-request-id'),
+    headers: L.omit(
+      res.headers,
+      'date',
+      'etag',
+      'x-request-id',
+      'last-modified'
+    ),
   }).toMatchSnapshot()
 }
 
@@ -67,7 +73,13 @@ export const matchRequestWithSnapshot = async (
   expect({
     status: res.statusCode,
     body: res.body,
-    headers: L.omit(res.headers, 'date', 'etag', 'x-request-id'),
+    headers: L.omit(
+      res.headers,
+      'date',
+      'etag',
+      'x-request-id',
+      'last-modified'
+    ),
   }).toMatchSnapshot.apply(expect, snapshotName ? [snapshotName] : [])
   expect(res.statusCode).toEqual(status)
 }

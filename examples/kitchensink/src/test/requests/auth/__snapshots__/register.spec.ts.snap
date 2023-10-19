@@ -4,10 +4,15 @@ exports[`requests /auth/register should register and send welcome email 1`] = `
 Object {
   "body": Object {
     "token": "test-redacted",
+    "user": Object {
+      "name": "Eddie Van Halen",
+      "pid": "test-redacted",
+      "username": "evh@example.com",
+    },
   },
   "headers": Object {
     "connection": "close",
-    "content-length": "252",
+    "content-length": "360",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
     "content-type": "application/json; charset=utf-8",
     "cross-origin-embedder-policy": "require-corp",
@@ -47,12 +52,15 @@ Array [
       "Welcome Eddie Van Halen, you can now log in.
   Verify your account with the link below:
 
-  http://localhost/verify?test-redacted
+  http://localhost/test-redacted
 ",
-      "<html>
+      ";<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?test-redacted\\">verify your account</a>
+  You can{' '}
+  <a href=\\"http://localhost:/test-redacted\\">
+    verify your account
+  </a>
 </body>
 
 </html>
@@ -69,10 +77,13 @@ Array [
     "originalMessage": Object {
       "attachments": Array [],
       "from": "Elle Postage <no-reply@elle-postage.example.com>",
-      "html": "<html>
+      "html": ";<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?test-redacted\\">verify your account</a>
+  You can{' '}
+  <a href=\\"http://localhost:/test-redacted\\">
+    verify your account
+  </a>
 </body>
 
 </html>
@@ -81,7 +92,7 @@ Array [
       "text": "Welcome Eddie Van Halen, you can now log in.
   Verify your account with the link below:
 
-  http://localhost/verify?test-redacted
+  http://localhost/test-redacted
 ",
       "to": "evh@example.com",
     },

@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`models buildModels 1`] = `
-Object {
+{
   "PopBand": [Function],
 }
 `;
 
 exports[`models buildModels 2`] = `
-Object {
+{
   "createdAt": 1970-01-01T00:00:01.981Z,
   "email": "slash@gnr.com",
   "frontman": "slash",
@@ -17,13 +17,13 @@ Object {
 `;
 
 exports[`models buildModels 3`] = `
-Object {
+{
   "frontman": "slash",
 }
 `;
 
 exports[`models buildModels 4`] = `
-Object {
+{
   "frontman": "bruce",
 }
 `;

@@ -9,9 +9,10 @@ const {
 
 const serializer = redactAndExpectMatch({
   'body.token': /^eyJh.+/,
+  'body.user.pid': /.+-.+-.+-.+-.+/,
 })
 
-const verifyTokenExpr = /verifyToken=[a-z0-9]{64}/g
+const verifyTokenExpr = /verify\/[a-z0-9]{64}/g
 const serializeVerifyEmails = redactAndExpectMatch(
   {
     'contents.1': verifyTokenExpr,
@@ -109,7 +110,7 @@ describe('requests', () => {
 
       await matchRequestWithSnapshot(
         200,
-        request().get(`/auth/verify?verifyToken=${verifyToken}`),
+        request().post(`/auth/verify`).send({ verifyToken }),
         { serializer }
       )
       await user.reload()

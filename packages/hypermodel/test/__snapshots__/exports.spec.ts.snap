@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`exports records api surface area 1`] = `
-Object {
+{
   "HyperModel": [Function],
   "HyperModelError": [Function],
   "ModelAssertionError": [Function],
-  "Schema": Object {
+  "Schema": {
     "AfterBulkCreate": [Function],
     "AfterBulkDestroy": [Function],
     "AfterBulkRestore": [Function],
@@ -24,7 +24,7 @@ Object {
     "AfterUpsert": [Function],
     "AfterValidate": [Function],
     "AllowNull": [Function],
-    "Association": Object {
+    "Association": {
       "BelongsTo": "belongsTo",
       "BelongsToMany": "belongsToMany",
       "HasMany": "hasMany",
@@ -60,7 +60,7 @@ Object {
     "Comment": [Function],
     "Contains": [Function],
     "CreatedAt": [Function],
-    "DataType": Object {
+    "DataType": {
       "ABSTRACT": [Function],
       "ARRAY": [Function],
       "BIGINT": [Function],
@@ -100,7 +100,7 @@ Object {
       "UUIDV1": [Function],
       "UUIDV4": [Function],
       "VIRTUAL": [Function],
-      "db2": Object {
+      "db2": {
         "BIGINT": [Function],
         "BLOB": [Function],
         "BOOLEAN": [Function],
@@ -119,7 +119,7 @@ Object {
         "TINYINT": [Function],
         "UUID": [Function],
       },
-      "mariadb": Object {
+      "mariadb": {
         "DATE": [Function],
         "DATEONLY": [Function],
         "DECIMAL": [Function],
@@ -128,7 +128,7 @@ Object {
         "JSON": [Function],
         "UUID": [Function],
       },
-      "mssql": Object {
+      "mssql": {
         "BIGINT": [Function],
         "BLOB": [Function],
         "BOOLEAN": [Function],
@@ -145,7 +145,7 @@ Object {
         "TINYINT": [Function],
         "UUID": [Function],
       },
-      "mysql": Object {
+      "mysql": {
         "DATE": [Function],
         "DATEONLY": [Function],
         "DECIMAL": [Function],
@@ -154,7 +154,31 @@ Object {
         "JSON": [Function],
         "UUID": [Function],
       },
-      "postgres": Object {
+      "oracle": {
+        "BIGINT": [Function],
+        "BLOB": [Function],
+        "BOOLEAN": [Function],
+        "CHAR": [Function],
+        "DATE": [Function],
+        "DATEONLY": [Function],
+        "DECIMAL": [Function],
+        "DOUBLE": [Function],
+        "DOUBLE PRECISION": [Function],
+        "ENUM": [Function],
+        "FLOAT": [Function],
+        "INTEGER": [Function],
+        "JSON": [Function],
+        "MEDIUMINT": [Function],
+        "NOW": [Function],
+        "NUMBER": [Function],
+        "REAL": [Function],
+        "SMALLINT": [Function],
+        "STRING": [Function],
+        "TEXT": [Function],
+        "TINYINT": [Function],
+        "UUID": [Function],
+      },
+      "postgres": {
         "BIGINT": [Function],
         "BLOB": [Function],
         "BOOLEAN": [Function],
@@ -177,7 +201,7 @@ Object {
         "TEXT": [Function],
         "TINYINT": [Function],
       },
-      "snowflake": Object {
+      "snowflake": {
         "BOOLEAN": [Function],
         "DATE": [Function],
         "DATEONLY": [Function],
@@ -185,7 +209,7 @@ Object {
         "TEXT": [Function],
         "UUID": [Function],
       },
-      "sqlite": Object {
+      "sqlite": {
         "BIGINT": [Function],
         "CHAR": [Function],
         "CITEXT": [Function],
@@ -213,7 +237,7 @@ Object {
     "HasAssociation": [Function],
     "HasMany": [Function],
     "HasOne": [Function],
-    "INFER_ALIAS_MAP": Object {
+    "INFER_ALIAS_MAP": {
       "aggregate": 2,
       "all": 0,
       "build": 1,
@@ -322,7 +346,7 @@ Object {
   "hashPassword": [Function],
   "migrate": [Function],
   "syncSchema": [Function],
-  "tableBuilder": Object {
+  "tableBuilder": {
     "bool": [Function],
     "build": [Function],
     "date": [Function],

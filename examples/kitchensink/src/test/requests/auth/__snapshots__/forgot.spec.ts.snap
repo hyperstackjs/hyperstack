@@ -175,15 +175,13 @@ Array [
       undefined,
       "Reset your password with this link:
 
-http://localhost/reset?test-redacted
+http://localhost/test-redacted
 ",
-      "<html>
+      ";<html>
 
 <body>
   You can
-  <a href=\\"http://localhost:/reset?test-redacted\\">
-    reset your password
-  </a>
+  <a href=\\"http://localhost:/test-redacted\\">reset your password</a>
 </body>
 
 </html>
@@ -200,13 +198,11 @@ http://localhost/reset?test-redacted
     "originalMessage": Object {
       "attachments": Array [],
       "from": "Elle Postage <no-reply@elle-postage.example.com>",
-      "html": "<html>
+      "html": ";<html>
 
 <body>
   You can
-  <a href=\\"http://localhost:/reset?test-redacted\\">
-    reset your password
-  </a>
+  <a href=\\"http://localhost:/test-redacted\\">reset your password</a>
 </body>
 
 </html>
@@ -214,7 +210,7 @@ http://localhost/reset?test-redacted
       "subject": "Your reset password link",
       "text": "Reset your password with this link:
 
-http://localhost/reset?test-redacted
+http://localhost/test-redacted
 ",
       "to": "evh@example.com",
     },
