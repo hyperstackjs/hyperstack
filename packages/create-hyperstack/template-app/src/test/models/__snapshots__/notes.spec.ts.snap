@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`models note should create with owner 1`] = `
-Object {
+{
   "content": "this and that",
   "title": "a note",
 }
 `;
 
 exports[`models note should find by owner 1`] = `
-Object {
+{
   "content": "you got me so I don't know what I'm doin'",
   "title": "you really got me",
 }
 `;
 
 exports[`models note should list by owner 1`] = `
-Array [
-  Object {
+[
+  {
     "content": "you've got to roll with the punches to get what's real",
     "title": "jump",
   },

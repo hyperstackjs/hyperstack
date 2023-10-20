@@ -22,7 +22,7 @@
     "execa": "^5",
     "hygen": "^6.2.8",
     "lodash": "^4.17.21",
-    "zod": "^3.17.3"
+    "zod": "^3.22.4"
   },
   "devDependencies": {}
 }

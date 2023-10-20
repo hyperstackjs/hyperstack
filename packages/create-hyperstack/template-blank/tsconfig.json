@@ -39,5 +39,6 @@
     "**/__tests__/",
     "test/fixtures",
     "testSetup.ts",
-  ]
+  ],
+  "files": ["global.d.ts"]
 }

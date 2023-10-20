@@ -1,4 +1,13 @@
-import { Controller, Get, Post, err, ok, requires, unauthorized } from 'hyperstack'
+import {
+  Controller,
+  Get,
+  Post,
+  err,
+  ok,
+  requires,
+  unauthorized,
+} from 'hyperstack'
+
 import type { Request, Response } from 'hyperstack'
 import { z } from 'zod'
 import { User } from '../models/user'

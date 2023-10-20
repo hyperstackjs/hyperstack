@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`requests /auth/forgot should finish forgot password flow and reset password 1`] = `
-Object {
+{
   "name": "Eddie Van Halen",
   "pid": "test-redacted",
   "username": "evh@example.com",
 }
 `;
 
-exports[`requests /auth/forgot should finish forgot password flow and reset password 2`] = `Array []`;
+exports[`requests /auth/forgot should finish forgot password flow and reset password 2`] = `[]`;
 
 exports[`requests /auth/forgot should finish forgot password flow and reset password: cannot reuse token 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "missing, illegal, or expired reset token",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "52",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -40,11 +40,11 @@ Object {
 `;
 
 exports[`requests /auth/forgot should finish forgot password flow and reset password: dont bypass our validation 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "password too short",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "30",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -69,11 +69,11 @@ Object {
 `;
 
 exports[`requests /auth/forgot should finish forgot password flow and reset password: ok lets go 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "ok": true,
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "11",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -98,22 +98,22 @@ Object {
 `;
 
 exports[`requests /auth/forgot should finish forgot password flow and reset password: you have to have a password 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "invalid_type",
         "expected": "string",
         "message": "Required",
-        "path": Array [
+        "path": [
           "password",
         ],
         "received": "undefined",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "151",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -138,11 +138,11 @@ Object {
 `;
 
 exports[`requests /auth/forgot should start forgot password flow and send email 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "ok": true,
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "11",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -167,11 +167,11 @@ Object {
 `;
 
 exports[`requests /auth/forgot should start forgot password flow and send email 2`] = `
-Array [
-  Object {
+[
+  {
     "content": undefined,
     "contentType": "multipart/alternative",
-    "contents": Array [
+    "contents": [
       undefined,
       "Reset your password with this link:
 
@@ -181,7 +181,7 @@ http://localhost/reset?test-redacted
 
 <body>
   You can
-  <a href=\\"http://localhost:/reset?test-redacted\\">
+  <a href="http://localhost:/reset?test-redacted">
     reset your password
   </a>
 </body>
@@ -189,22 +189,22 @@ http://localhost/reset?test-redacted
 </html>
 ",
     ],
-    "envelope": Object {
+    "envelope": {
       "from": "no-reply@elle-postage.example.com",
-      "to": Array [
+      "to": [
         "evh@example.com",
       ],
     },
     "from": "no-reply@elle-postage.example.com",
     "messageId": "test-redacted",
-    "originalMessage": Object {
-      "attachments": Array [],
+    "originalMessage": {
+      "attachments": [],
       "from": "Elle Postage <no-reply@elle-postage.example.com>",
       "html": "<html>
 
 <body>
   You can
-  <a href=\\"http://localhost:/reset?test-redacted\\">
+  <a href="http://localhost:/reset?test-redacted">
     reset your password
   </a>
 </body>
@@ -220,7 +220,7 @@ http://localhost/reset?test-redacted
     },
     "response": "test-redacted",
     "subject": "Your reset password link",
-    "to": Array [
+    "to": [
       "evh@example.com",
     ],
   },
@@ -228,22 +228,22 @@ http://localhost/reset?test-redacted
 `;
 
 exports[`requests /auth/forgot should validate: bad reset token 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "invalid_type",
         "expected": "string",
         "message": "Required",
-        "path": Array [
+        "path": [
           "password",
         ],
         "received": "undefined",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "151",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -268,31 +268,31 @@ Object {
 `;
 
 exports[`requests /auth/forgot should validate: no reset token field 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "invalid_type",
         "expected": "string",
         "message": "Required",
-        "path": Array [
+        "path": [
           "resetToken",
         ],
         "received": "undefined",
       },
-      Object {
+      {
         "code": "invalid_type",
         "expected": "string",
         "message": "Required",
-        "path": Array [
+        "path": [
           "password",
         ],
         "received": "undefined",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "261",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -317,11 +317,11 @@ Object {
 `;
 
 exports[`requests /auth/forgot should validate: no such user 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "incorrect username or password",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "42",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -347,22 +347,22 @@ Object {
 `;
 
 exports[`requests /auth/forgot should validate: no user field 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "invalid_type",
         "expected": "string",
         "message": "Required",
-        "path": Array [
+        "path": [
           "username",
         ],
         "received": "undefined",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "151",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -387,21 +387,21 @@ Object {
 `;
 
 exports[`requests /auth/forgot should validate: not an email 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "invalid_string",
         "message": "Invalid email",
-        "path": Array [
+        "path": [
           "username",
         ],
         "validation": "email",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "136",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",

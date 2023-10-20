@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`mailers welcome should send welcome 1`] = `
-Object {
+{
   "content": undefined,
   "contentType": "multipart/alternative",
-  "contents": Array [
+  "contents": [
     undefined,
     "Welcome joe, you can now log in.
   Verify your account with the link below:
@@ -14,27 +14,27 @@ Object {
     "<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+  You can <a href="http://localhost:/verify?verifyToken=">verify your account</a>
 </body>
 
 </html>
 ",
   ],
-  "envelope": Object {
+  "envelope": {
     "from": "no-reply@elle-postage.example.com",
-    "to": Array [
+    "to": [
       "joe@example.com",
     ],
   },
   "from": "no-reply@elle-postage.example.com",
   "messageId": "test-redacted",
-  "originalMessage": Object {
-    "attachments": Array [],
+  "originalMessage": {
+    "attachments": [],
     "from": "Elle Postage <no-reply@elle-postage.example.com>",
     "html": "<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+  You can <a href="http://localhost:/verify?verifyToken=">verify your account</a>
 </body>
 
 </html>
@@ -49,18 +49,18 @@ Object {
   },
   "response": "test-redacted",
   "subject": "Welcome joe",
-  "to": Array [
+  "to": [
     "joe@example.com",
   ],
 }
 `;
 
 exports[`mailers welcome should send welcome: manual 1`] = `
-Array [
-  Object {
+[
+  {
     "content": undefined,
     "contentType": "multipart/alternative",
-    "contents": Array [
+    "contents": [
       undefined,
       "Welcome joe, you can now log in.
   Verify your account with the link below:
@@ -70,27 +70,27 @@ Array [
       "<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+  You can <a href="http://localhost:/verify?verifyToken=">verify your account</a>
 </body>
 
 </html>
 ",
     ],
-    "envelope": Object {
+    "envelope": {
       "from": "no-reply@elle-postage.example.com",
-      "to": Array [
+      "to": [
         "joe@example.com",
       ],
     },
     "from": "no-reply@elle-postage.example.com",
     "messageId": "test-redacted",
-    "originalMessage": Object {
-      "attachments": Array [],
+    "originalMessage": {
+      "attachments": [],
       "from": "Elle Postage <no-reply@elle-postage.example.com>",
       "html": "<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?verifyToken=\\">verify your account</a>
+  You can <a href="http://localhost:/verify?verifyToken=">verify your account</a>
 </body>
 
 </html>
@@ -105,7 +105,7 @@ Array [
     },
     "response": "test-redacted",
     "subject": "Welcome joe",
-    "to": Array [
+    "to": [
       "joe@example.com",
     ],
   },

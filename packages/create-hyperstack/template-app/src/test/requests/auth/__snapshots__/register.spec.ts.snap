@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`requests /auth/register should register and send welcome email 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "token": "test-redacted",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "252",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -30,7 +30,7 @@ Object {
 `;
 
 exports[`requests /auth/register should register and send welcome email 2`] = `
-Object {
+{
   "name": "Eddie Van Halen",
   "pid": "test-redacted",
   "username": "evh@example.com",
@@ -38,11 +38,11 @@ Object {
 `;
 
 exports[`requests /auth/register should register and send welcome email 3`] = `
-Array [
-  Object {
+[
+  {
     "content": undefined,
     "contentType": "multipart/alternative",
-    "contents": Array [
+    "contents": [
       undefined,
       "Welcome Eddie Van Halen, you can now log in.
   Verify your account with the link below:
@@ -52,27 +52,27 @@ Array [
       "<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?test-redacted\\">verify your account</a>
+  You can <a href="http://localhost:/verify?test-redacted">verify your account</a>
 </body>
 
 </html>
 ",
     ],
-    "envelope": Object {
+    "envelope": {
       "from": "no-reply@elle-postage.example.com",
-      "to": Array [
+      "to": [
         "evh@example.com",
       ],
     },
     "from": "no-reply@elle-postage.example.com",
     "messageId": "test-redacted",
-    "originalMessage": Object {
-      "attachments": Array [],
+    "originalMessage": {
+      "attachments": [],
       "from": "Elle Postage <no-reply@elle-postage.example.com>",
       "html": "<html>
 
 <body>
-  You can <a href=\\"http://localhost:/verify?test-redacted\\">verify your account</a>
+  You can <a href="http://localhost:/verify?test-redacted">verify your account</a>
 </body>
 
 </html>
@@ -87,7 +87,7 @@ Array [
     },
     "response": "test-redacted",
     "subject": "Welcome Eddie Van Halen",
-    "to": Array [
+    "to": [
       "evh@example.com",
     ],
   },
@@ -95,22 +95,22 @@ Array [
 `;
 
 exports[`requests /auth/register should validate 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "invalid_type",
         "expected": "string",
         "message": "Required",
-        "path": Array [
+        "path": [
           "name",
         ],
         "received": "undefined",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "147",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -135,21 +135,21 @@ Object {
 `;
 
 exports[`requests /auth/register should validate 2`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "invalid_string",
         "message": "Invalid email",
-        "path": Array [
+        "path": [
           "username",
         ],
         "validation": "email",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "136",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -174,25 +174,26 @@ Object {
 `;
 
 exports[`requests /auth/register should validate 3`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "too_small",
+        "exact": false,
         "inclusive": true,
         "message": "String must contain at least 5 character(s)",
         "minimum": 5,
-        "path": Array [
+        "path": [
           "password",
         ],
         "type": "string",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
-    "content-length": "185",
+    "content-length": "199",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
     "content-type": "application/json; charset=utf-8",
     "cross-origin-embedder-policy": "require-corp",
@@ -215,11 +216,11 @@ Object {
 `;
 
 exports[`requests /auth/register should validate 4`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "user exists",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "23",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -244,11 +245,11 @@ Object {
 `;
 
 exports[`requests /auth/register should verify with secret token 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "ok": true,
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "11",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -272,4 +273,4 @@ Object {
 }
 `;
 
-exports[`requests /auth/register should verify with secret token 2`] = `Array []`;
+exports[`requests /auth/register should verify with secret token 2`] = `[]`;
