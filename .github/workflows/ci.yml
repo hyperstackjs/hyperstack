@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18]
+        node-version: [20]
 
     services:
       redis:
@@ -23,7 +23,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
         ports:
-          - "6379:6379"
+          - '6379:6379'
       postgres:
         image: postgres
         env:
@@ -31,10 +31,9 @@ jobs:
           POSTGRES_USER: tie
           POSTGRES_PASSWORD: tie
         ports:
-          - "5432:5432"
+          - '5432:5432'
         # Set health checks to wait until postgres has started
-        options:
-          --health-cmd pg_isready
+        options: --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
@@ -44,8 +43,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-
-
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -106,7 +103,6 @@ jobs:
 
       - name: Built apps test - template
         run: cd packages/create-hyperstack/template-app && node dist/bin/hyperstack.js routes
-
 
       - name: Install dependencies (restore dev deps)
         if: steps.cache.outputs.cache-hit != 'true'
