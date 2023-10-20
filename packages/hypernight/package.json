@@ -14,7 +14,7 @@
     "coverage": "nyc --reporter=text --reporter=html npm run test",
     "build:types": "pnpm build",
     "clean": "rimraf dist",
-    "build": "pnpm clean && tsup-node src/* --dts"
+    "build": "pnpm clean && tsc"
   },
   "dependencies": {
     "express": "^4.18.1",

@@ -9,9 +9,9 @@
   ],
   "scripts": {
     "build:extras": "build",
-    "build:dev": "tsup-node src/* --watch --dts",
+    "build:dev": "tsc -w",
     "clean": "rimraf dist",
-    "build": "pnpm clean && tsup-node src/* --dts && cp -r templates dist",
+    "build": "pnpm clean && tsc",
     "test": "jest",
     "test:ci:core": "pnpm test",
     "test:watch": "jest --watch"

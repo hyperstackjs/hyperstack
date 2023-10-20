@@ -10,10 +10,10 @@
   },
   "include": [
     "./src",
-    "./test"
   ],
   "exclude": [
     "**/__tests__/",
-    "test/fixtures"
+    "test/fixtures",
+    "examples"
   ]
 }

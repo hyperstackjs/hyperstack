@@ -8,10 +8,10 @@
     "dist/"
   ],
   "scripts": {
-    "build:dev": "tsup-node src/* --watch --dts",
+    "build:dev": "tsc -w",
     "build:core": "pnpm build",
     "clean": "rimraf dist",
-    "build": "pnpm clean && tsup-node src/* --dts",
+    "build": "pnpm clean && tsc",
     "test": "jest",
     "test:ci:core": "pnpm test",
     "test:watch": "jest --watch"

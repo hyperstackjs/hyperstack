@@ -5,9 +5,9 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build:dev": "tsup-node src/* --watch --dts",
+    "build:dev": "tsc -w",
     "clean": "rimraf dist",
-    "build": "pnpm clean && tsup-node src/* --dts",
+    "build": "pnpm clean && tsc",
     "test": "jest",
     "test:watch": "jest --watch"
   },
