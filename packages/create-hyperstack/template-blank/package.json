@@ -1,6 +1,6 @@
 {
   "name": "template-blank",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "private": true,
   "scripts": {
     "dev": "ts-node-dev bin/hyperstack.ts start",
@@ -11,8 +11,8 @@
     "test:ci:apps": "pnpm test"
   },
   "dependencies": {
-    "@hyperstackjs/initializer-jwt": "1.0.33",
-    "hyperstack": "1.0.33",
+    "@hyperstackjs/initializer-jwt": "1.0.34",
+    "hyperstack": "1.0.34",
     "lodash": "^4.17.21",
     "sqlite3": "^5.1.6",
     "zod": "^3.22.4"
@@ -21,7 +21,7 @@
     "tsconfig-paths": "^4.2.0",
     "ts-node": "^10.9.1",
     "typescript": "5.2.2",
-    "@hyperstackjs/testing": "1.0.33",
+    "@hyperstackjs/testing": "1.0.34",
     "@types/jest": "^29.5.6",
     "@types/lodash": "^4.14.200",
     "@types/node": "^20.8.7",

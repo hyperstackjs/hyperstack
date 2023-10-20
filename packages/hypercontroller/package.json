@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/hypercontroller",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "author": "Dotan Nahum <dotan@rng0.io>",
   "license": "MIT",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@anatine/zod-openapi": "^1.3.0",
-    "@hyperstackjs/hypernight": "1.0.33",
+    "@hyperstackjs/hypernight": "1.0.34",
     "ajv": "^6.12.3",
     "async-express-mw": "^0.1.2",
     "body-parser": "^1.20.0",
@@ -42,6 +42,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@hyperstackjs/typings": "1.0.33"
+    "@hyperstackjs/typings": "1.0.34"
   }
 }

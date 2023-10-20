@@ -1,6 +1,6 @@
 {
   "name": "@hyperstackjs/hyperportal",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "author": "Dotan Nahum <dotan@rng0.io>",
   "license": "MIT",
   "main": "dist/index.js",
@@ -23,6 +23,6 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@hyperstackjs/typings": "1.0.33"
+    "@hyperstackjs/typings": "1.0.34"
   }
 }
