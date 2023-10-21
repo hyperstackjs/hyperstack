@@ -1,44 +1,33 @@
 {
+  "extends": "./baseconfig.json",
   "compilerOptions": {
-    "composite": false,
+    "outDir": "dist",
+    "strict": true,
+    "strictNullChecks": false,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "declaration": false,
     "declarationMap": false,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": false,
-    "moduleResolution": "node",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "module": "commonjs",
-    "target": "es6",
-    "outDir": "./dist",
-    "strictNullChecks": false,
-    "strictPropertyInitialization": false,
     "rootDir": ".",
-    "resolveJsonModule": true,
     "baseUrl": "./",
     "paths": {
       "@/*": [
         "./src/*"
       ]
-    }
+    },
   },
   "include": [
     "./testSetup.ts",
     "./bin",
-    "./src",
+    "./src"
   ],
   "exclude": [
-    "src/test/",
+    "src/test",
     "**/__tests__/",
     "test/fixtures",
-    "testSetup.ts",
+    "testSetup.ts"
   ],
   "files": ["global.d.ts"]
 }

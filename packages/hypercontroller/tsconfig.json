@@ -1,12 +1,7 @@
 {
-  "//extends": "pick from: stylomatic/{node-library|react-library|nextjs|base}.json",
-  "extends": "stylomatic/node-library.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "strict": true,
-    "isolatedModules": false,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "outDir": "dist/",
   },
   "include": [
     "./src",
@@ -14,6 +9,6 @@
   "exclude": [
     "**/__tests__/",
     "test/fixtures",
-    "examples"
+    "node_modules/"
   ]
 }

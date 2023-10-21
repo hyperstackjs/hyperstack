@@ -1,7 +1,3 @@
-/*
-eslint-disable max-classes-per-file
-*/
-
 import {
   AllowNull,
   Column,
@@ -13,7 +9,7 @@ import {
 } from 'sequelize-typescript'
 import type { CountOptions } from 'sequelize/types'
 
-class HyperModel<T> extends Model<T> {
+class HyperModel<T extends {}> extends Model<T> {
   static async exists(options?: CountOptions) {
     const c = await this.count(options)
     return c !== 0
