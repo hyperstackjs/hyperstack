@@ -6,6 +6,7 @@
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "strict": true,

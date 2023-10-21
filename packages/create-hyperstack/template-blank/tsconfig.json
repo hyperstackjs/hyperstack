@@ -5,6 +5,7 @@
     "strict": true,
     "strictNullChecks": false,
     "isolatedModules": false,
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,

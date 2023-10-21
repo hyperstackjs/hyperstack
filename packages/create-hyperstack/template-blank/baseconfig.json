@@ -5,6 +5,7 @@
     "target": "ES2021",
     "moduleResolution": "Node",
     "esModuleInterop": true,
+    "strictPropertyInitialization": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
