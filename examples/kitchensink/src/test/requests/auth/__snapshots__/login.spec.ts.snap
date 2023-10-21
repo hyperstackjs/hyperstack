@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`requests /auth/login should login 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "token": "test-redacted",
-    "user": Object {
+    "user": {
       "name": "Eddie Van Halen",
       "pid": "test-redacted",
       "username": "evh@example.com",
     },
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "360",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -35,11 +35,11 @@ Object {
 `;
 
 exports[`requests /auth/login should not login on bad credentials 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "incorrect username or password",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "42",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -65,11 +65,11 @@ Object {
 `;
 
 exports[`requests /auth/login should validate 1`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "incorrect username or password",
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "42",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -95,21 +95,21 @@ Object {
 `;
 
 exports[`requests /auth/login should validate 2`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "invalid_string",
         "message": "Invalid email",
-        "path": Array [
+        "path": [
           "username",
         ],
         "validation": "email",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "136",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
@@ -134,24 +134,24 @@ Object {
 `;
 
 exports[`requests /auth/login should validate 3`] = `
-Object {
-  "body": Object {
+{
+  "body": {
     "error": "validation",
-    "validationErrors": Array [
-      Object {
+    "validationErrors": [
+      {
         "code": "too_small",
         "exact": false,
         "inclusive": true,
         "message": "String must contain at least 5 character(s)",
         "minimum": 5,
-        "path": Array [
+        "path": [
           "password",
         ],
         "type": "string",
       },
     ],
   },
-  "headers": Object {
+  "headers": {
     "connection": "close",
     "content-length": "199",
     "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",

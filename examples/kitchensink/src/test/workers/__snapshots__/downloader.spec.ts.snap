@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`workers downloader should calculate, inprocess 1`] = `
-Object {
+{
   "number": NaN,
 }
 `;
 
 exports[`workers downloader should calculate, inprocess 2`] = `
-Object {
+{
   "number": NaN,
 }
 `;
