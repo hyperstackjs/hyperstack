@@ -56,7 +56,6 @@
     "stylomatic": "0.4.9",
     "testcontainers": "^8.10.1",
     "ts-jest": "^29.1.1",
-    "tsc-alias": "^1.8.8",
     "typescript": "^5.2.2",
     "typescript-cp": "^0.1.9"
   }

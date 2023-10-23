@@ -5,7 +5,6 @@ import path from 'path'
 if (process.env.HST_LOAD_BENCH) {
   require('time-require')
 }
-require('tsconfig-paths/register')
 
 const { cli } = require('hyperstack')
 

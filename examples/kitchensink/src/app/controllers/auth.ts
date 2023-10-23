@@ -2,7 +2,7 @@ import { Controller, Post, err, ok, requires, unauthorized } from 'hyperstack'
 import type { Request, Response } from 'hyperstack'
 import { z } from 'zod'
 import { User } from '../models/user'
-import { AuthMailer } from '@/app/mailers/auth'
+import { AuthMailer } from '../mailers/auth'
 
 const routes = {
   forgot: Post('forgot'), // decorators can also be fiddled with like this

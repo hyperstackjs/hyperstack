@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "ts-node-dev bin/hyperstack.ts start",
-    "build:watch": "tscp && concurrently -n typescript,aliases,public 'tsc -w' 'tsc-alias -w'",
+    "build:watch": "tscp && tsc -w",
     "build:dev": "cd dist && node-dev bin/hyperstack.js start",
-    "build": "tsc && tsc-alias && tscp",
+    "build": "tsc && tscp",
     "test": "jest --runInBand --logHeapUsage",
     "test:ci:apps": "pnpm test"
   },
@@ -37,7 +37,6 @@
     "time-require": "^0.1.2",
     "ts-jest": "^29.1.1",
     "ts-node-dev": "^2.0.0",
-    "tsc-alias": "^1.8.8",
     "typescript-cp": "^0.1.9"
   }
 }

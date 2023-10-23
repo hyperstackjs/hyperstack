@@ -119,7 +119,7 @@ There's an even shorter way to test, which is just to return a delivery to the t
 import { test } from '@hyperstackjs/testing'
 import { AuthMailer } from '../../app/mailers'
 import { root } from '../../config/settings'
-import { appContext } from '@/app'
+import { appContext } from '../../app'
 
 const {
   mailers,
