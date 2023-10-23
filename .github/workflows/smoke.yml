@@ -21,7 +21,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
         ports:
-          - "6379:6379"
+          - '6379:6379'
       postgres:
         image: postgres
         env:
@@ -29,21 +29,18 @@ jobs:
           POSTGRES_USER: tie
           POSTGRES_PASSWORD: tie
         ports:
-          - "5432:5432"
+          - '5432:5432'
         # Set health checks to wait until postgres has started
-        options:
-          --health-cmd pg_isready
+        options: --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
