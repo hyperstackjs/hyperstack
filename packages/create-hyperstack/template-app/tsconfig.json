@@ -1,5 +1,8 @@
 {
   "extends": "./baseconfig.json",
+  "ts-node": {
+    "transpileOnly": true,
+  },
   "compilerOptions": {
     "outDir": "dist",
     "strict": true,

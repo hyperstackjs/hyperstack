@@ -1,8 +1,12 @@
 {
   "extends": "../../tsconfig.json",
+  "ts-node": {
+    "transpileOnly": true,
+  },
   "compilerOptions": {
     "outDir": "dist",
     "strict": true,
+    "target":"ES6",
     "strictNullChecks": false,
     "isolatedModules": false,
     "experimentalDecorators": true,
