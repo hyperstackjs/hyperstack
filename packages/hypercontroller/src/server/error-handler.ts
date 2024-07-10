@@ -26,7 +26,7 @@ const errorHandler =
           validationErrors: err.errors,
         })
       )
-    } else if (err.isModelError) {
+    } else if (err.isModelError || err instanceof URIError) {
       responseSender(res, new HttpResponseBadRequest({ error: err.message }))
     } else if (err) {
       // prefer a request-bound logger because of occasional child loggers & context that's bound to these
