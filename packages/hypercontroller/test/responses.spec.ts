@@ -31,6 +31,11 @@ class Api {
     throw new ValidationError({ errors: [] })
   }
 
+  @Get('uri-error')
+  async uriErrors(_req: Request, _res: Response) {
+    throw new URIError("this is a uri error")
+  }
+
   @Get('raw-object')
   async rawObject(_req: Request, _res: Response) {
     return { hello: 'ok' }
@@ -53,6 +58,9 @@ describe('hypercontroller/responses', () => {
   })
   it('validation error', async () => {
     await expectWithSnapshot(400, request(app).get('/api/validation-error'))
+  })
+  it('uri error', async () => {
+    await expectWithSnapshot(400, request(app).get('/api/uri-error'))
   })
   it('raw object', async () => {
     await expectWithSnapshot(200, request(app).get('/api/raw-object'))
