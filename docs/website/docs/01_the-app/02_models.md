@@ -63,6 +63,12 @@ Migrations exist in `config/db/migrate` and you run them like so:
 $ bin/hyperstack migrate
 ```
 
+For generating a new migration file for modifying an existing model you can run:
+```
+bin/hyperstack g migration migration_name
+```
+This will create a new empty migration file for you to fill in the changes to your models.
+
 ## Configuration
 
 Model configuration that's available to you is exciting because it controls all aspects of development, testing, and production, with a ton of goodies, coming from production experience.
